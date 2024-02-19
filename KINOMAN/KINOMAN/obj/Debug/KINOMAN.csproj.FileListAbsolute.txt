@@ -8,3 +8,13 @@ Z:\!Обмен\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопои
 Z:\!Обмен\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\obj\Debug\KINOMAN.csproj.CoreCompileInputs.cache
 Z:\!Обмен\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\obj\Debug\KINOMAN.exe
 Z:\!Обмен\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\obj\Debug\KINOMAN.pdb
+C:\!ProjectMain\KINOMAN UP\KINOMAN\KINOMAN\bin\Debug\KINOMAN.exe.config
+C:\!ProjectMain\KINOMAN UP\KINOMAN\KINOMAN\bin\Debug\KINOMAN.exe
+C:\!ProjectMain\KINOMAN UP\KINOMAN\KINOMAN\bin\Debug\KINOMAN.pdb
+C:\!ProjectMain\KINOMAN UP\KINOMAN\KINOMAN\obj\Debug\KINOMAN.csproj.AssemblyReference.cache
+C:\!ProjectMain\KINOMAN UP\KINOMAN\KINOMAN\obj\Debug\KINOMAN.Form1.resources
+C:\!ProjectMain\KINOMAN UP\KINOMAN\KINOMAN\obj\Debug\KINOMAN.Properties.Resources.resources
+C:\!ProjectMain\KINOMAN UP\KINOMAN\KINOMAN\obj\Debug\KINOMAN.csproj.GenerateResource.cache
+C:\!ProjectMain\KINOMAN UP\KINOMAN\KINOMAN\obj\Debug\KINOMAN.csproj.CoreCompileInputs.cache
+C:\!ProjectMain\KINOMAN UP\KINOMAN\KINOMAN\obj\Debug\KINOMAN.exe
+C:\!ProjectMain\KINOMAN UP\KINOMAN\KINOMAN\obj\Debug\KINOMAN.pdb
