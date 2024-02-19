@@ -6,6 +6,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -26,33 +27,22 @@ namespace KINOMAN
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string imageUrl = ImageUrlTextBox.Text.Trim();
-            // Load image from URL
-            WebClient client = new WebClient();
-            byte[] imageData = client.DownloadData(imageUrl);
-            MemoryStream stream = new MemoryStream(imageData);
-            Image image = Image.FromStream(stream);
+            int positionColumn = 0;
+            int positionRow = 0;
+            film_info filmInfo = new film_info();
+            foreach(var film in filmInfo.GetMockItems())
+            {
+                string nameFilm = film.Name;
+                string ImageFilm = film.ImageUrl;
+                Tuple<System.Windows.Forms.PictureBox, System.Windows.Forms.Label> filmCard = 
+                    new film_card_component(ImageFilm, nameFilm).FilmCardCreateComponent();
 
-            // Create PictureBox
-            PictureBox pictureBox = new PictureBox();
-            pictureBox.Image = image;
-            pictureBox.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox.Width = 200;
-            pictureBox.Height = 200;
+                tableLayoutPanel1.Controls.Add(filmCard.Item1, positionColumn, positionRow);
+                tableLayoutPanel1.Controls.Add(filmCard.Item2, positionColumn, positionRow + 1);
 
-            // Create Label
-            Label label = new Label();
-            label.Text = Path.GetFileName(imageUrl.Replace(".jpg", ""));
-            label.TextAlign = ContentAlignment.MiddleCenter;
-            label.ForeColor = Color.White;
-            label.Font = new Font("Segoe UI", 12, FontStyle.Bold);
-
-            // Add PictureBox and Label to TableLayoutPanel
-            tableLayoutPanel1.Controls.Add(pictureBox, 0, 0);
-            tableLayoutPanel1.Controls.Add(label, 0, 1);
-
-           /* // Add TableLayoutPanel to the form
-            Controls.Add(tableLayoutPanel1);*/
+                positionColumn++;
+            }
+   
         }
     }
 }
