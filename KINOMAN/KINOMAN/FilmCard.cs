@@ -19,11 +19,10 @@ namespace KINOMAN
 
         static void FilmCardCreateComponent(Dictionary<string, string> filmInfo) 
         {
-            foreach (var kvp in filmInfo)
+            foreach (var film in filmInfo)
             {
-                string key = kvp.Key;
-                string value = kvp.Value;
-                Console.WriteLine($"Key: {key}, Value: {value}");
+                string key = film.Key;
+                string value = film.Value;
             }
         }
     }
