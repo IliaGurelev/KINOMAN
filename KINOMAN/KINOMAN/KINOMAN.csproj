@@ -22,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <LangVersion>preview</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -31,6 +32,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <LangVersion>preview</LangVersion>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
@@ -97,27 +99,49 @@
   <ItemGroup>
     <Compile Include="api\ConnectStringDB.cs" />
     <Compile Include="api\FilmData.cs" />
+    <Compile Include="api\UserData.cs" />
     <Compile Include="components\FilmCardComponent.cs" />
-    <Compile Include="mock\film_info.cs" />
-    <Compile Include="MoviePage.cs">
+    <Compile Include="components\UserElement.cs" />
+    <Compile Include="constant\IndexTableLayout.cs" />
+    <Compile Include="constant\MainPageOption.cs" />
+    <Compile Include="form\LogIn.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MoviePage.Designer.cs">
+    <Compile Include="form\LogIn.Designer.cs">
+      <DependentUpon>LogIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\SignUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\SignUp.Designer.cs">
+      <DependentUpon>SignUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mock\film_info.cs" />
+    <Compile Include="form\MoviePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\MoviePage.Designer.cs">
       <DependentUpon>MoviePage.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainPage.cs">
+    <Compile Include="form\MainPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainPage.Designer.cs">
+    <Compile Include="form\MainPage.Designer.cs">
       <DependentUpon>MainPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="MainPage.resx">
+    <EmbeddedResource Include="form\LogIn.resx">
+      <DependentUpon>LogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\MainPage.resx">
       <DependentUpon>MainPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MoviePage.resx">
+    <EmbeddedResource Include="form\MoviePage.resx">
       <DependentUpon>MoviePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\SignUp.resx">
+      <DependentUpon>SignUp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

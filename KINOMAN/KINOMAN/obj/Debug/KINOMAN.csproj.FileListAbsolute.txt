@@ -52,3 +52,5 @@ C:\!ProjectMain\KINOMAN UP\KINOMAN\KINOMAN\bin\Debug\System.ValueTuple.xml
 C:\!ProjectMain\KINOMAN UP\KINOMAN\KINOMAN\obj\Debug\KINOMAN.csproj.CopyComplete
 C:\!ProjectMain\KINOMAN UP\KINOMAN\KINOMAN\obj\Debug\KINOMAN.MoviePage.resources
 C:\!ProjectMain\KINOMAN UP\KINOMAN\KINOMAN\obj\Debug\KINOMAN.MainPage.resources
+C:\!ProjectMain\KINOMAN UP\KINOMAN\KINOMAN\obj\Debug\KINOMAN.LogIn.resources
+C:\!ProjectMain\KINOMAN UP\KINOMAN\KINOMAN\obj\Debug\KINOMAN.form.SignUp.resources

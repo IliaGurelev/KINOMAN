@@ -1,60 +1,39 @@
 ﻿
 using KINOMAN.api;
+using KINOMAN.constant;
+using KINOMAN.form;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Net;
 using System.Reflection;
 using System.Reflection.Emit;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace KINOMAN
 {
     public partial class MainPage : Form
     {
-        public MainPage()
+        public string[] dataTableUser = [];
+        public MainPage(string[] dataUserInput = null)
         {
             InitializeComponent();
+            dataTableUser = dataUserInput;
+            
         }
-
-        Dictionary<int, int[]> INDEX_IMAGE_TABLE_LAYOUT = new Dictionary<int, int[]>()
-        {
-            {1, new int[] {0, 0}},
-            {2, new int[] {1, 0}},
-            {3, new int[] {2, 0}},
-            {4, new int[] {3, 0}},
-            {5, new int[] {4, 0}},
-            {6, new int[] {0, 2}},
-            {7, new int[] {1, 2}},
-            {8, new int[] {2, 2}},
-            {9, new int[] {3, 2}},
-            {10, new int[]{4, 2}},
-        };
-
-        Dictionary<int, int[]> INDEX_TEXT_TABLE_LAYOUT = new Dictionary<int, int[]>()
-        {
-            {1, new int[] {0, 1}},
-            {2, new int[] {1, 1}},
-            {3, new int[] {2, 1}},
-            {4, new int[] {3, 1}},
-            {5, new int[] {4, 1}},
-            {6, new int[] {0, 3}},
-            {7, new int[] {1, 3}},
-            {8, new int[] {2, 3}},
-            {9, new int[] {3, 3}},
-            {10, new int[]{4, 3}},
-        };
 
         int startPositionListFilms = 0;
         int filmCount = 0;
-
-        int MOVE_PAGINTAION_STEP = 10;
 
         List<FilmData.Item> filmData;
         private void Form1_Load(object sender, EventArgs e)
@@ -72,9 +51,9 @@ namespace KINOMAN
         {
             //Фильмы
             List<FilmData.Item> films;
-            if (filmData.Count >= startPositionListFilms + MOVE_PAGINTAION_STEP)
+            if (filmData.Count >= startPositionListFilms + MainPageOption.MOVE_PAGINTAION_STEP)
             {
-                films = filmData.GetRange(startPositionListFilms, MOVE_PAGINTAION_STEP);
+                films = filmData.GetRange(startPositionListFilms, MainPageOption.MOVE_PAGINTAION_STEP);
             }
             else
             {
@@ -82,6 +61,12 @@ namespace KINOMAN
             }
 
             Render_Film(films, tableLayoutPanel1);
+
+            //Пользователь
+            if(dataTableUser != null)
+            {
+                Render_User(dataTableUser);
+            }
         }
 
         private void Render_Film(List<FilmData.Item> films, TableLayoutPanel container)
@@ -89,8 +74,8 @@ namespace KINOMAN
             int position = 1;
             foreach (var film in films)
             {
-                int[] positionImage  = INDEX_IMAGE_TABLE_LAYOUT[position];
-                int[] positionText = INDEX_TEXT_TABLE_LAYOUT[position];
+                int[] positionImage  = IndexTableLayout.INDEX_IMAGE_TABLE_LAYOUT()[position];
+                int[] positionText = IndexTableLayout.INDEX_TEXT_TABLE_LAYOUT()[position];
 
                 string nameFilm = film.Name;
                 string ImageFilm = film.ImageUrl;
@@ -106,6 +91,24 @@ namespace KINOMAN
 
                 position++;
             }
+        }
+
+        private void Render_User(string[] dataUserTableInput)
+        {
+            LogInButton.Dispose();
+            SignUpButton.Dispose();
+
+            System.Windows.Forms.Label userLogin = new System.Windows.Forms.Label();
+            userLogin.Text = dataTableUser[1];
+            userLogin.ForeColor = Color.White;
+            userLogin.Font = new Font("Segoe UI", 12, FontStyle.Bold);
+            userLogin.Location = new Point(768, 3);
+            userLogin.AutoEllipsis = true;
+            userLogin.Size = new Size(250, 25);
+
+
+
+            this.Controls.Add(userLogin);
         }
 
         private void PictureMovie_Click(object sender, EventArgs e, string nameFilm, string imageUrl, string description)
@@ -125,11 +128,11 @@ namespace KINOMAN
 
         private void paginationNextButton_Click(object sender, EventArgs e)
         {
-            if (startPositionListFilms + MOVE_PAGINTAION_STEP <= filmCount)
+            if (startPositionListFilms + MainPageOption.MOVE_PAGINTAION_STEP <= filmCount)
             {
                 clearTableLayout(tableLayoutPanel1);
 
-                startPositionListFilms += MOVE_PAGINTAION_STEP;
+                startPositionListFilms += MainPageOption.MOVE_PAGINTAION_STEP;
 
                 Render_Page(filmData);
             }
@@ -141,10 +144,24 @@ namespace KINOMAN
             {
                 clearTableLayout(tableLayoutPanel1);
 
-                startPositionListFilms -= MOVE_PAGINTAION_STEP;
+                startPositionListFilms -= MainPageOption.MOVE_PAGINTAION_STEP;
 
                 Render_Page(filmData);
             }
+        }
+
+        private void LogInButton_Click(object sender, EventArgs e)
+        {
+            LogIn loginForm = new LogIn();
+            loginForm.Show();
+            this.Hide();
+        }
+
+        private void SignUpButton_Click(object sender, EventArgs e)
+        {
+            SignUp signUpForm = new SignUp();
+            signUpForm.Show();
+            this.Hide();
         }
     }
 }

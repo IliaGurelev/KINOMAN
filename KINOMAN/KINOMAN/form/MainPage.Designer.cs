@@ -32,6 +32,8 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.paginationNextButton = new System.Windows.Forms.PictureBox();
             this.paginationBackButton = new System.Windows.Forms.PictureBox();
+            this.SignUpButton = new System.Windows.Forms.Button();
+            this.LogInButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.paginationNextButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.paginationBackButton)).BeginInit();
             this.SuspendLayout();
@@ -77,12 +79,34 @@
             this.paginationBackButton.TabStop = false;
             this.paginationBackButton.Click += new System.EventHandler(this.paginationBackButton_Click);
             // 
+            // SignUpButton
+            // 
+            this.SignUpButton.Location = new System.Drawing.Point(883, 4);
+            this.SignUpButton.Name = "SignUpButton";
+            this.SignUpButton.Size = new System.Drawing.Size(138, 23);
+            this.SignUpButton.TabIndex = 10;
+            this.SignUpButton.Text = "Зарегестрироваться";
+            this.SignUpButton.UseVisualStyleBackColor = true;
+            this.SignUpButton.Click += new System.EventHandler(this.SignUpButton_Click);
+            // 
+            // LogInButton
+            // 
+            this.LogInButton.Location = new System.Drawing.Point(732, 3);
+            this.LogInButton.Name = "LogInButton";
+            this.LogInButton.Size = new System.Drawing.Size(145, 24);
+            this.LogInButton.TabIndex = 11;
+            this.LogInButton.Text = "Войти";
+            this.LogInButton.UseVisualStyleBackColor = true;
+            this.LogInButton.Click += new System.EventHandler(this.LogInButton_Click);
+            // 
             // MainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGray;
             this.ClientSize = new System.Drawing.Size(1033, 567);
+            this.Controls.Add(this.SignUpButton);
+            this.Controls.Add(this.LogInButton);
             this.Controls.Add(this.paginationBackButton);
             this.Controls.Add(this.paginationNextButton);
             this.Controls.Add(this.tableLayoutPanel1);
@@ -102,6 +126,8 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.PictureBox paginationNextButton;
         private System.Windows.Forms.PictureBox paginationBackButton;
+        private System.Windows.Forms.Button SignUpButton;
+        private System.Windows.Forms.Button LogInButton;
     }
 }
 
