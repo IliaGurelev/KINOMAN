@@ -55,7 +55,7 @@
             this.passwordTextBox.Location = new System.Drawing.Point(255, 90);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.Size = new System.Drawing.Size(311, 33);
-            this.passwordTextBox.TabIndex = 9;
+            this.passwordTextBox.TabIndex = 2;
             // 
             // loginTextBox
             // 
@@ -63,7 +63,7 @@
             this.loginTextBox.Location = new System.Drawing.Point(255, 23);
             this.loginTextBox.Name = "loginTextBox";
             this.loginTextBox.Size = new System.Drawing.Size(311, 33);
-            this.loginTextBox.TabIndex = 8;
+            this.loginTextBox.TabIndex = 1;
             // 
             // signUpButton
             // 
@@ -73,7 +73,7 @@
             this.signUpButton.Location = new System.Drawing.Point(183, 246);
             this.signUpButton.Name = "signUpButton";
             this.signUpButton.Size = new System.Drawing.Size(217, 39);
-            this.signUpButton.TabIndex = 12;
+            this.signUpButton.TabIndex = 4;
             this.signUpButton.Text = "Зарегистрироваться";
             this.signUpButton.UseVisualStyleBackColor = true;
             this.signUpButton.Click += new System.EventHandler(this.loginButton_Click);
@@ -84,7 +84,7 @@
             this.passwordRepeatTextBox.Location = new System.Drawing.Point(255, 155);
             this.passwordRepeatTextBox.Name = "passwordRepeatTextBox";
             this.passwordRepeatTextBox.Size = new System.Drawing.Size(311, 33);
-            this.passwordRepeatTextBox.TabIndex = 13;
+            this.passwordRepeatTextBox.TabIndex = 3;
             // 
             // label1
             // 

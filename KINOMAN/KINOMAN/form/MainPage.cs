@@ -1,5 +1,6 @@
 ﻿
 using KINOMAN.api;
+using KINOMAN.components;
 using KINOMAN.constant;
 using KINOMAN.form;
 using System;
@@ -84,7 +85,10 @@ namespace KINOMAN
                 Tuple<System.Windows.Forms.PictureBox, System.Windows.Forms.Label> filmCard =
                     new FilmCardComponent(ImageFilm, nameFilm).FilmCardCreateComponent();
 
-                filmCard.Item1.Click += (sender, e) => PictureMovie_Click(sender, e, nameFilm, ImageFilm, description);
+                string[] movieData = [film.Id.ToString(), film.Name, film.Description, film.ImageUrl];
+
+                filmCard.Item1.Click += (sender, e) => PictureMovie_Click(sender, e, movieData, dataTableUser);
+                filmCard.Item1.Cursor = Cursors.Hand;
 
                 container.Controls.Add(filmCard.Item1, positionImage[0], positionImage[1]);
                 container.Controls.Add(filmCard.Item2, positionText[0], positionText[1]);
@@ -93,29 +97,44 @@ namespace KINOMAN
             }
         }
 
+        private void PictureMovie_Click(object sender, EventArgs e, string[] movieDataInput, string[] dataTableUserInput)
+        {
+            MoviePage moviePage = new MoviePage(movieDataInput, dataTableUserInput);
+            moviePage.Show();
+        }
+
         private void Render_User(string[] dataUserTableInput)
         {
             LogInButton.Dispose();
             SignUpButton.Dispose();
 
-            System.Windows.Forms.Label userLogin = new System.Windows.Forms.Label();
-            userLogin.Text = dataTableUser[1];
-            userLogin.ForeColor = Color.White;
-            userLogin.Font = new Font("Segoe UI", 12, FontStyle.Bold);
-            userLogin.Location = new Point(768, 3);
-            userLogin.AutoEllipsis = true;
-            userLogin.Size = new Size(250, 25);
+            var (iconUser, loginUser) = UserComponent.CreateUserElement(dataUserTableInput);
+            loginUser.AutoSize = false;
+            loginUser.Size = new Size(250, 25);
+            loginUser.Location = new Point(744, 6);
+            loginUser.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 
+            iconUser.Size = new Size(31, 29);
+            iconUser.Location = new Point(998, 3);
 
+            loginUser.Click += (sender, e) => UserElement_Click(sender, e, dataUserTableInput);
+            iconUser.Click += (sender, e) => UserElement_Click(sender, e, dataUserTableInput);
 
-            this.Controls.Add(userLogin);
+            loginUser.Cursor = Cursors.Hand;
+            iconUser.Cursor = Cursors.Hand;
+
+            this.Controls.Add(iconUser);
+            this.Controls.Add(loginUser);
         }
 
-        private void PictureMovie_Click(object sender, EventArgs e, string nameFilm, string imageUrl, string description)
+        private void UserElement_Click(object sender, EventArgs e, string[] dataUserTableInput)
         {
-            MoviePage moviePage = new MoviePage(nameFilm, imageUrl, description);
-            moviePage.Show();
+            UserPage userPage = new UserPage(dataUserTableInput);
+            userPage.Show();
+
+            this.Hide();
         }
+
         private void clearTableLayout(TableLayoutPanel tableLP)
         {
             while (tableLP.Controls.Count > 0)

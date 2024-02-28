@@ -12,7 +12,7 @@ namespace KINOMAN.api
     {
         public class Item
         {
-            public int Id { get; set; }
+            public string Id { get; set; }
             public string Name { get; set; }
             public string Description { get; set; }
             public string ImageUrl { get; set; }
@@ -34,7 +34,7 @@ namespace KINOMAN.api
                     {
                         while (reader.Read())
                         {
-                            int id = reader.GetInt32(0);
+                            string id = reader.GetString(0);
                             string name = reader.GetString(1);
                             string description = reader.GetString(2);
                             string imageUrl = reader.GetString(3);
@@ -54,6 +54,72 @@ namespace KINOMAN.api
             }
 
             return itemList;
+        }
+
+        static public void InsertFavoriteMovie(string id,string idUser, string idMovie)
+        {
+            string connString = ConnectStringDB.GetConnetctString();
+
+            using (var conn = new NpgsqlConnection(connString))
+            {
+                try
+                {
+                    // Открытие подключения
+                    conn.Open();
+
+                    // Создание SQL-запроса INSERT
+                    string sql = "INSERT INTO favorite_movie (id, id_movie, id_user) VALUES (@param1, @param2, @param3)";
+
+                    // Создание команды с использованием SQL-запроса и подключения
+                    using (var cmd = new NpgsqlCommand(sql, conn))
+                    {
+                        // Добавление параметров к команде
+                        cmd.Parameters.AddWithValue("param1", id);
+                        cmd.Parameters.AddWithValue("param2", idMovie);
+                        cmd.Parameters.AddWithValue("param3", idUser);
+
+                        // Выполнение команды (вставка данных)
+                        int rowsAffected = cmd.ExecuteNonQuery();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Ошибка связи при добавлении в избранное");
+                }
+            }
+        }
+
+        static public void InsertWatchedMovie(string id, string idUser, string idMovie)
+        {
+            string connString = ConnectStringDB.GetConnetctString();
+
+            using (var conn = new NpgsqlConnection(connString))
+            {
+                try
+                {
+                    // Открытие подключения
+                    conn.Open();
+
+                    // Создание SQL-запроса INSERT
+                    string sql = "INSERT INTO watched_movie (id, id_movie, id_user) VALUES (@param1, @param2, @param3)";
+
+                    // Создание команды с использованием SQL-запроса и подключения
+                    using (var cmd = new NpgsqlCommand(sql, conn))
+                    {
+                        // Добавление параметров к команде
+                        cmd.Parameters.AddWithValue("param1", id);
+                        cmd.Parameters.AddWithValue("param2", idMovie);
+                        cmd.Parameters.AddWithValue("param3", idUser);
+
+                        // Выполнение команды (вставка данных)
+                        int rowsAffected = cmd.ExecuteNonQuery();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Ошибка связи при добавлении в просмотренное");
+                }
+            }
         }
     }
 }

@@ -12,6 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Net.Mime.MediaTypeNames;
+using KINOMAN.utils;
 
 namespace KINOMAN
 {
@@ -28,22 +29,13 @@ namespace KINOMAN
         }
 
         // Create PictureBox
-        static public System.Drawing.Image CreatePictureBoxFromUrl(string imageUrl)
-        {
-            using (WebClient client = new WebClient())
-            {
-                Stream stream = client.OpenRead(imageUrl);
-                return System.Drawing.Image.FromStream(stream);
-            }
-
-        }
 
         public Tuple<PictureBox, System.Windows.Forms.Label> FilmCardCreateComponent() 
         {
 
             // Create PictureBox
             PictureBox filmCover = new PictureBox();
-            filmCover.Image = CreatePictureBoxFromUrl(_imageUrl);
+            filmCover.Image = ConverterImageFromURL.ConvertImageFromURL(_imageUrl);
             filmCover.SizeMode = PictureBoxSizeMode.Zoom;
             filmCover.Width = 210;
             filmCover.Height = 250;

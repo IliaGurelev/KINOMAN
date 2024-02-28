@@ -1,4 +1,5 @@
 ﻿using KINOMAN.api;
+using KINOMAN.utils;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,6 +17,7 @@ namespace KINOMAN.form
         public SignUp()
         {
             InitializeComponent();
+            this.BackColor = Color.FromArgb(16, 14, 25);
         }
 
         private void loginButton_Click(object sender, EventArgs e)
@@ -24,7 +26,7 @@ namespace KINOMAN.form
             {
                 if(passwordRepeatTextBox.Text == passwordTextBox.Text) 
                 { 
-                    string id = Guid.NewGuid().ToString();
+                    string id = IdGenerator.idGenerate();
                     string login = loginTextBox.Text;
                     string password = passwordTextBox.Text;
 

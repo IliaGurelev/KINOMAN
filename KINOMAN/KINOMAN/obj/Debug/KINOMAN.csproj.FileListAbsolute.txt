@@ -54,3 +54,4 @@ C:\!ProjectMain\KINOMAN UP\KINOMAN\KINOMAN\obj\Debug\KINOMAN.MoviePage.resources
 C:\!ProjectMain\KINOMAN UP\KINOMAN\KINOMAN\obj\Debug\KINOMAN.MainPage.resources
 C:\!ProjectMain\KINOMAN UP\KINOMAN\KINOMAN\obj\Debug\KINOMAN.LogIn.resources
 C:\!ProjectMain\KINOMAN UP\KINOMAN\KINOMAN\obj\Debug\KINOMAN.form.SignUp.resources
+C:\!ProjectMain\KINOMAN UP\KINOMAN\KINOMAN\obj\Debug\KINOMAN.form.UserPage.resources

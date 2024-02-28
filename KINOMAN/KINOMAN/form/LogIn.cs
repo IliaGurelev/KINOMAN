@@ -20,7 +20,7 @@ namespace KINOMAN
 
         private void LogIn_Load(object sender, EventArgs e)
         {
-          
+            this.BackColor = Color.FromArgb(16, 14, 25);
         }
 
         private void loginButton_Click_1(object sender, EventArgs e)

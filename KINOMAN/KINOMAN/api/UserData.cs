@@ -31,9 +31,9 @@ namespace KINOMAN.api
                             string id = reader.GetString(0);
                             string login = reader.GetString(1);
                             string password = reader.GetString(2);
-                            string icon = reader.GetString(3);
+                            string icon = reader.GetInt32(3).ToString();
 
-                            string[] userData = { id, login, password };
+                            string[] userData = { id, login, password, icon};
 
                             return userData;
                         }
@@ -94,7 +94,7 @@ namespace KINOMAN.api
                     conn.Open();
 
                     // Создание SQL-запроса INSERT
-                    string sql = "INSERT INTO users (id, logins, passwords, icon) VALUES (@param1, @param2, @param3)";
+                    string sql = "INSERT INTO users (id, logins, passwords) VALUES (@param1, @param2, @param3)";
 
                     // Создание команды с использованием SQL-запроса и подключения
                     using (var cmd = new NpgsqlCommand(sql, conn))
@@ -111,6 +111,37 @@ namespace KINOMAN.api
                 catch (Exception ex)
                 {
                     MessageBox.Show("Ошибка регестрации, возможно ваш логин уже занят");
+                }
+            }
+        }
+
+        static public string GetIconUrlUser(string iconID)
+        {
+            string connString = ConnectStringDB.GetConnetctString();
+
+            using (NpgsqlConnection conn = new NpgsqlConnection(connString))
+            {
+                conn.Open();
+
+                string sql = "SELECT image_url FROM icons WHERE id = '" + iconID + "'";
+
+                using (NpgsqlCommand cmd = new NpgsqlCommand(sql, conn))
+                {
+                    using (NpgsqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            string imageUrl = reader.GetString(0);
+
+                            return imageUrl;
+                        }
+                        else
+                        {
+                            string imageUrl = "https://i.pinimg.com/564x/13/13/c5/1313c59a2ad84b0abf6b0a840e418856.jpg";
+
+                            return imageUrl;
+                        }
+                    }
                 }
             }
         }

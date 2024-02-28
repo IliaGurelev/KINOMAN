@@ -65,6 +65,7 @@
             this.addWatched.TabIndex = 3;
             this.addWatched.Text = "Просмотренно";
             this.addWatched.UseVisualStyleBackColor = true;
+            this.addWatched.Click += new System.EventHandler(this.addWatched_Click);
             // 
             // addFavorite
             // 
@@ -74,6 +75,7 @@
             this.addFavorite.TabIndex = 4;
             this.addFavorite.Text = "Добавить в избранное";
             this.addFavorite.UseVisualStyleBackColor = true;
+            this.addFavorite.Click += new System.EventHandler(this.addFavorite_Click);
             // 
             // descriptionMovie
             // 
