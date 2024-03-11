@@ -99,11 +99,14 @@
   <ItemGroup>
     <Compile Include="api\ConnectStringDB.cs" />
     <Compile Include="api\FilmData.cs" />
+    <Compile Include="api\iconsData.cs" />
     <Compile Include="api\UserData.cs" />
+    <Compile Include="api\UserMovieData.cs" />
     <Compile Include="components\FilmCardComponent.cs" />
+    <Compile Include="components\MovieCardClick.cs" />
     <Compile Include="components\UserComponent.cs" />
-    <Compile Include="constant\IndexTableLayout.cs" />
     <Compile Include="constant\MainPageOption.cs" />
+    <Compile Include="constant\UserPageOption.cs" />
     <Compile Include="form\LogIn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,11 +119,23 @@
     <Compile Include="form\SignUp.Designer.cs">
       <DependentUpon>SignUp.cs</DependentUpon>
     </Compile>
+    <Compile Include="form\UserOptionPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\UserOptionPage.Designer.cs">
+      <DependentUpon>UserOptionPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="form\UserPage.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="form\UserPage.Designer.cs">
       <DependentUpon>UserPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\UserPageOptionPasswordAunteficator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\UserPageOptionPasswordAunteficator.Designer.cs">
+      <DependentUpon>UserPageOptionPasswordAunteficator.cs</DependentUpon>
     </Compile>
     <Compile Include="mock\film_info.cs" />
     <Compile Include="form\MoviePage.cs">
@@ -137,6 +152,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="utils\clearTable.cs" />
     <Compile Include="utils\ConverterImageFromURL.cs" />
     <Compile Include="utils\IdGenerator.cs" />
     <EmbeddedResource Include="form\LogIn.resx">
@@ -151,8 +167,14 @@
     <EmbeddedResource Include="form\SignUp.resx">
       <DependentUpon>SignUp.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="form\UserOptionPage.resx">
+      <DependentUpon>UserOptionPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="form\UserPage.resx">
       <DependentUpon>UserPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\UserPageOptionPasswordAunteficator.resx">
+      <DependentUpon>UserPageOptionPasswordAunteficator.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -162,6 +184,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -177,6 +200,29 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\icons-option-user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wired-gradient-35-edit.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit-icon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\accept-icon.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

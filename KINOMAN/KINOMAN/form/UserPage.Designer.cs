@@ -32,10 +32,13 @@
             this.userLoginElement = new System.Windows.Forms.Label();
             this.openWatchedButton = new System.Windows.Forms.Button();
             this.openFavoriteButton = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.watchedCountLabel = new System.Windows.Forms.Label();
+            this.favoriteCountLabel = new System.Windows.Forms.Label();
             this.tableLayoutPanelMovie = new System.Windows.Forms.TableLayoutPanel();
+            this.labelNameList = new System.Windows.Forms.Label();
+            this.optionUserButton = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.userIconElement)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.optionUserButton)).BeginInit();
             this.SuspendLayout();
             // 
             // userIconElement
@@ -76,28 +79,29 @@
             this.openFavoriteButton.TabIndex = 3;
             this.openFavoriteButton.Text = "В избранном";
             this.openFavoriteButton.UseVisualStyleBackColor = true;
+            this.openFavoriteButton.Click += new System.EventHandler(this.openFavoriteButton_Click);
             // 
-            // label1
+            // watchedCountLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(158, 316);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 21);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Count";
+            this.watchedCountLabel.AutoSize = true;
+            this.watchedCountLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.watchedCountLabel.ForeColor = System.Drawing.Color.White;
+            this.watchedCountLabel.Location = new System.Drawing.Point(158, 316);
+            this.watchedCountLabel.Name = "watchedCountLabel";
+            this.watchedCountLabel.Size = new System.Drawing.Size(52, 21);
+            this.watchedCountLabel.TabIndex = 4;
+            this.watchedCountLabel.Text = "Count";
             // 
-            // label2
+            // favoriteCountLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(158, 367);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 21);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Count";
+            this.favoriteCountLabel.AutoSize = true;
+            this.favoriteCountLabel.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.favoriteCountLabel.ForeColor = System.Drawing.Color.White;
+            this.favoriteCountLabel.Location = new System.Drawing.Point(158, 367);
+            this.favoriteCountLabel.Name = "favoriteCountLabel";
+            this.favoriteCountLabel.Size = new System.Drawing.Size(52, 21);
+            this.favoriteCountLabel.TabIndex = 5;
+            this.favoriteCountLabel.Text = "Count";
             // 
             // tableLayoutPanelMovie
             // 
@@ -118,24 +122,49 @@
             this.tableLayoutPanelMovie.Size = new System.Drawing.Size(766, 490);
             this.tableLayoutPanelMovie.TabIndex = 6;
             // 
+            // labelNameList
+            // 
+            this.labelNameList.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelNameList.ForeColor = System.Drawing.Color.White;
+            this.labelNameList.Location = new System.Drawing.Point(836, 18);
+            this.labelNameList.Name = "labelNameList";
+            this.labelNameList.Size = new System.Drawing.Size(185, 24);
+            this.labelNameList.TabIndex = 7;
+            this.labelNameList.Text = "Просмотренно";
+            this.labelNameList.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // optionUserButton
+            // 
+            this.optionUserButton.Image = global::KINOMAN.Properties.Resources.icons_option_user;
+            this.optionUserButton.Location = new System.Drawing.Point(12, 518);
+            this.optionUserButton.Name = "optionUserButton";
+            this.optionUserButton.Size = new System.Drawing.Size(41, 44);
+            this.optionUserButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.optionUserButton.TabIndex = 8;
+            this.optionUserButton.TabStop = false;
+            this.optionUserButton.Click += new System.EventHandler(this.optionUserButton_Click);
+            // 
             // UserPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(14)))), ((int)(((byte)(25)))));
             this.ClientSize = new System.Drawing.Size(1033, 574);
+            this.Controls.Add(this.optionUserButton);
+            this.Controls.Add(this.labelNameList);
             this.Controls.Add(this.tableLayoutPanelMovie);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.favoriteCountLabel);
+            this.Controls.Add(this.watchedCountLabel);
             this.Controls.Add(this.openFavoriteButton);
             this.Controls.Add(this.openWatchedButton);
             this.Controls.Add(this.userLoginElement);
             this.Controls.Add(this.userIconElement);
             this.Name = "UserPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "UserPage";
+            this.Text = "Профиль";
             this.Load += new System.EventHandler(this.UserPage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.userIconElement)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.optionUserButton)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -147,8 +176,10 @@
         private System.Windows.Forms.Label userLoginElement;
         private System.Windows.Forms.Button openWatchedButton;
         private System.Windows.Forms.Button openFavoriteButton;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label watchedCountLabel;
+        private System.Windows.Forms.Label favoriteCountLabel;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanelMovie;
+        private System.Windows.Forms.Label labelNameList;
+        private System.Windows.Forms.PictureBox optionUserButton;
     }
 }

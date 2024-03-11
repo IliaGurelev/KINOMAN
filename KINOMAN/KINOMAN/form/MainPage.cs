@@ -3,6 +3,7 @@ using KINOMAN.api;
 using KINOMAN.components;
 using KINOMAN.constant;
 using KINOMAN.form;
+using KINOMAN.utils;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -39,13 +40,18 @@ namespace KINOMAN
         List<FilmData.Item> filmData;
         private void Form1_Load(object sender, EventArgs e)
         {
-            this.BackColor = Color.FromArgb(16, 14, 25);
             tableLayoutPanel1.BackColor = Color.FromArgb(16, 14, 25);
 
             filmData = new FilmData().GetMovie();
             filmCount = filmData.Count;
 
             Render_Page(filmData);
+
+            //Пользователь
+            if (dataTableUser != null)
+            {
+                Render_User(dataTableUser);
+            }
         }
 
         private void Render_Page(List<FilmData.Item> filmData)
@@ -62,12 +68,6 @@ namespace KINOMAN
             }
 
             Render_Film(films, tableLayoutPanel1);
-
-            //Пользователь
-            if(dataTableUser != null)
-            {
-                Render_User(dataTableUser);
-            }
         }
 
         private void Render_Film(List<FilmData.Item> films, TableLayoutPanel container)
@@ -75,8 +75,8 @@ namespace KINOMAN
             int position = 1;
             foreach (var film in films)
             {
-                int[] positionImage  = IndexTableLayout.INDEX_IMAGE_TABLE_LAYOUT()[position];
-                int[] positionText = IndexTableLayout.INDEX_TEXT_TABLE_LAYOUT()[position];
+                int[] positionImage  = MainPageOption.INDEX_IMAGE_TABLE_LAYOUT()[position];
+                int[] positionText = MainPageOption.INDEX_TEXT_TABLE_LAYOUT()[position];
 
                 string nameFilm = film.Name;
                 string ImageFilm = film.ImageUrl;
@@ -87,7 +87,7 @@ namespace KINOMAN
 
                 string[] movieData = [film.Id.ToString(), film.Name, film.Description, film.ImageUrl];
 
-                filmCard.Item1.Click += (sender, e) => PictureMovie_Click(sender, e, movieData, dataTableUser);
+                filmCard.Item1.Click += (sender, e) => MovieCardClick.MovieCardHandler_Click(sender, e, movieData, dataTableUser);
                 filmCard.Item1.Cursor = Cursors.Hand;
 
                 container.Controls.Add(filmCard.Item1, positionImage[0], positionImage[1]);
@@ -95,12 +95,6 @@ namespace KINOMAN
 
                 position++;
             }
-        }
-
-        private void PictureMovie_Click(object sender, EventArgs e, string[] movieDataInput, string[] dataTableUserInput)
-        {
-            MoviePage moviePage = new MoviePage(movieDataInput, dataTableUserInput);
-            moviePage.Show();
         }
 
         private void Render_User(string[] dataUserTableInput)
@@ -135,21 +129,11 @@ namespace KINOMAN
             this.Hide();
         }
 
-        private void clearTableLayout(TableLayoutPanel tableLP)
-        {
-            while (tableLP.Controls.Count > 0)
-            {
-                Control control = tableLP.Controls[0];
-                tableLP.Controls.Remove(control);
-                control.Dispose(); // Освобождаем ресурсы, связанные с элементом
-            }
-        }
-
         private void paginationNextButton_Click(object sender, EventArgs e)
         {
             if (startPositionListFilms + MainPageOption.MOVE_PAGINTAION_STEP <= filmCount)
             {
-                clearTableLayout(tableLayoutPanel1);
+                clearTable.clearTableLayout(tableLayoutPanel1);
 
                 startPositionListFilms += MainPageOption.MOVE_PAGINTAION_STEP;
 
@@ -161,7 +145,7 @@ namespace KINOMAN
         {
             if (startPositionListFilms != 0)
             {
-                clearTableLayout(tableLayoutPanel1);
+                clearTable.clearTableLayout(tableLayoutPanel1);
 
                 startPositionListFilms -= MainPageOption.MOVE_PAGINTAION_STEP;
 
