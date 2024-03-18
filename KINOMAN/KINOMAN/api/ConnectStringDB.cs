@@ -10,7 +10,7 @@ namespace KINOMAN.api
     {
         public static string GetConnetctString()
         {
-            return "Host=localhost;Username=postgres;Password=123123;Database=kinoman";
+            return "Host=localhost;Username=postgres;Password=0000;Database=kinoman";
         }
     }
 }

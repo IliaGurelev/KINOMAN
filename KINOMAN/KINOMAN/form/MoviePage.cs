@@ -36,8 +36,6 @@ namespace KINOMAN
 
         private void MoviePage_Load(object sender, EventArgs e)
         {
-            this.BackColor = Color.FromArgb(16, 14, 25);
-            descriptionMovie.BackColor = Color.FromArgb(16, 14, 25);
 
             pictureBoxFilm.Image = ConverterImageFromURL.ConvertImageFromURL(_imageUrl);
 

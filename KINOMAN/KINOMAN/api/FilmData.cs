@@ -84,7 +84,7 @@ namespace KINOMAN.api
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Ошибка связи при добавлении в избранное");
+                    MessageBox.Show("Ошибка связи при добавлении в избранное: " + ex);
                 }
             }
         }
@@ -117,7 +117,7 @@ namespace KINOMAN.api
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Ошибка связи при добавлении в просмотренное");
+                    MessageBox.Show("Ошибка связи при добавлении в просмотренное: " + ex);
                 }
             }
         }

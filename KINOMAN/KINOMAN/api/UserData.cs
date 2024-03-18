@@ -110,7 +110,7 @@ namespace KINOMAN.api
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Ошибка регестрации, возможно ваш логин уже занят");
+                    MessageBox.Show("Ошибка регестрации, возможно ваш логин уже занят или " + ex);
                 }
             }
         }

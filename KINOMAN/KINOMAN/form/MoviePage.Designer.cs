@@ -79,7 +79,7 @@
             // 
             // descriptionMovie
             // 
-            this.descriptionMovie.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.descriptionMovie.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(14)))), ((int)(((byte)(25)))));
             this.descriptionMovie.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.descriptionMovie.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.descriptionMovie.ForeColor = System.Drawing.Color.White;
@@ -95,7 +95,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(14)))), ((int)(((byte)(25)))));
             this.ClientSize = new System.Drawing.Size(1033, 567);
             this.Controls.Add(this.descriptionMovie);
             this.Controls.Add(this.addFavorite);
@@ -105,7 +105,6 @@
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "MoviePage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Окно фильма";
             this.Load += new System.EventHandler(this.MoviePage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFilm)).EndInit();
             this.ResumeLayout(false);

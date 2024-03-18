@@ -2,7 +2,6 @@ Z:\!Обмен\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопои
 Z:\!Обмен\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\bin\Debug\KINOMAN.exe
 Z:\!Обмен\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\bin\Debug\KINOMAN.pdb
 Z:\!Обмен\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\obj\Debug\KINOMAN.csproj.AssemblyReference.cache
-Z:\!Обмен\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\obj\Debug\KINOMAN.Form1.resources
 Z:\!Обмен\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\obj\Debug\KINOMAN.Properties.Resources.resources
 Z:\!Обмен\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\obj\Debug\KINOMAN.csproj.GenerateResource.cache
 Z:\!Обмен\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\obj\Debug\KINOMAN.csproj.CoreCompileInputs.cache
@@ -55,3 +54,45 @@ C:\!ProjectMain\KINOMAN UP\KINOMAN\KINOMAN\obj\Debug\KINOMAN.MainPage.resources
 C:\!ProjectMain\KINOMAN UP\KINOMAN\KINOMAN\obj\Debug\KINOMAN.LogIn.resources
 C:\!ProjectMain\KINOMAN UP\KINOMAN\KINOMAN\obj\Debug\KINOMAN.form.SignUp.resources
 C:\!ProjectMain\KINOMAN UP\KINOMAN\KINOMAN\obj\Debug\KINOMAN.form.UserPage.resources
+C:\!ProjectMain\KINOMAN UP\KINOMAN\KINOMAN\obj\Debug\KINOMAN.form.UserOptionPage.resources
+C:\!ProjectMain\KINOMAN UP\KINOMAN\KINOMAN\obj\Debug\KINOMAN.form.UserPageOptionPasswordAunteficator.resources
+Z:\!Обмен\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\obj\Debug\KINOMAN.LogIn.resources
+Z:\!Обмен\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\obj\Debug\KINOMAN.MainPage.resources
+Z:\!Обмен\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\obj\Debug\KINOMAN.MoviePage.resources
+Z:\!Обмен\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\obj\Debug\KINOMAN.form.SignUp.resources
+Z:\!Обмен\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\obj\Debug\KINOMAN.form.UserOptionPage.resources
+Z:\!Обмен\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\obj\Debug\KINOMAN.form.UserPage.resources
+Z:\!Обмен\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\obj\Debug\KINOMAN.form.UserPageOptionPasswordAunteficator.resources
+Z:\!Обмен\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+Z:\!Обмен\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\bin\Debug\Microsoft.Bcl.HashCode.dll
+Z:\!Обмен\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+Z:\!Обмен\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+Z:\!Обмен\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\bin\Debug\Npgsql.dll
+Z:\!Обмен\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\bin\Debug\System.Buffers.dll
+Z:\!Обмен\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\bin\Debug\System.Collections.Immutable.dll
+Z:\!Обмен\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+Z:\!Обмен\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\bin\Debug\System.Memory.dll
+Z:\!Обмен\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\bin\Debug\System.Numerics.Vectors.dll
+Z:\!Обмен\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+Z:\!Обмен\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\bin\Debug\System.Text.Encodings.Web.dll
+Z:\!Обмен\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\bin\Debug\System.Text.Json.dll
+Z:\!Обмен\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\bin\Debug\System.Threading.Channels.dll
+Z:\!Обмен\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\bin\Debug\System.Threading.Tasks.Extensions.dll
+Z:\!Обмен\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\bin\Debug\System.ValueTuple.dll
+Z:\!Обмен\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+Z:\!Обмен\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\bin\Debug\Microsoft.Bcl.HashCode.xml
+Z:\!Обмен\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+Z:\!Обмен\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+Z:\!Обмен\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\bin\Debug\Npgsql.xml
+Z:\!Обмен\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\bin\Debug\System.Buffers.xml
+Z:\!Обмен\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\bin\Debug\System.Collections.Immutable.xml
+Z:\!Обмен\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+Z:\!Обмен\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\bin\Debug\System.Memory.xml
+Z:\!Обмен\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\bin\Debug\System.Numerics.Vectors.xml
+Z:\!Обмен\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+Z:\!Обмен\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\bin\Debug\System.Text.Encodings.Web.xml
+Z:\!Обмен\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\bin\Debug\System.Text.Json.xml
+Z:\!Обмен\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\bin\Debug\System.Threading.Channels.xml
+Z:\!Обмен\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\bin\Debug\System.Threading.Tasks.Extensions.xml
+Z:\!Обмен\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\bin\Debug\System.ValueTuple.xml
+Z:\!Обмен\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\obj\Debug\KINOMAN.csproj.CopyComplete

@@ -17,7 +17,6 @@ namespace KINOMAN.form
         public SignUp()
         {
             InitializeComponent();
-            this.BackColor = Color.FromArgb(16, 14, 25);
         }
 
         private void loginButton_Click(object sender, EventArgs e)
