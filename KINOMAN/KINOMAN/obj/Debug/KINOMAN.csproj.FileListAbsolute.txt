@@ -96,3 +96,17 @@ Z:\!Обмен\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопои
 Z:\!Обмен\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\bin\Debug\System.Threading.Tasks.Extensions.xml
 Z:\!Обмен\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\bin\Debug\System.ValueTuple.xml
 Z:\!Обмен\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\obj\Debug\KINOMAN.csproj.CopyComplete
+Z:\ОБМЕН\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\obj\Debug\KINOMAN.csproj.AssemblyReference.cache
+Z:\ОБМЕН\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\obj\Debug\KINOMAN.csproj.SuggestedBindingRedirects.cache
+Z:\ОБМЕН\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\obj\Debug\KINOMAN.LogIn.resources
+Z:\ОБМЕН\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\obj\Debug\KINOMAN.MainPage.resources
+Z:\ОБМЕН\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\obj\Debug\KINOMAN.MoviePage.resources
+Z:\ОБМЕН\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\obj\Debug\KINOMAN.form.SignUp.resources
+Z:\ОБМЕН\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\obj\Debug\KINOMAN.form.UserOptionPage.resources
+Z:\ОБМЕН\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\obj\Debug\KINOMAN.form.UserPage.resources
+Z:\ОБМЕН\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\obj\Debug\KINOMAN.form.UserPageOptionPasswordAunteficator.resources
+Z:\ОБМЕН\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\obj\Debug\KINOMAN.Properties.Resources.resources
+Z:\ОБМЕН\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\obj\Debug\KINOMAN.csproj.GenerateResource.cache
+Z:\ОБМЕН\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\obj\Debug\KINOMAN.csproj.CoreCompileInputs.cache
+Z:\ОБМЕН\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\obj\Debug\KINOMAN.exe
+Z:\ОБМЕН\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\obj\Debug\KINOMAN.pdb
