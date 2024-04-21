@@ -37,6 +37,7 @@
             this.tableLayoutPanelMovie = new System.Windows.Forms.TableLayoutPanel();
             this.labelNameList = new System.Windows.Forms.Label();
             this.optionUserButton = new System.Windows.Forms.PictureBox();
+            this.BackToFormButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.userIconElement)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.optionUserButton)).BeginInit();
             this.SuspendLayout();
@@ -105,7 +106,7 @@
             // 
             // tableLayoutPanelMovie
             // 
-            this.tableLayoutPanelMovie.BackColor = System.Drawing.Color.Silver;
+            this.tableLayoutPanelMovie.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(14)))), ((int)(((byte)(25)))));
             this.tableLayoutPanelMovie.ColumnCount = 4;
             this.tableLayoutPanelMovie.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanelMovie.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
@@ -144,12 +145,23 @@
             this.optionUserButton.TabStop = false;
             this.optionUserButton.Click += new System.EventHandler(this.optionUserButton_Click);
             // 
+            // BackToFormButton
+            // 
+            this.BackToFormButton.Location = new System.Drawing.Point(919, 541);
+            this.BackToFormButton.Name = "BackToFormButton";
+            this.BackToFormButton.Size = new System.Drawing.Size(102, 23);
+            this.BackToFormButton.TabIndex = 9;
+            this.BackToFormButton.Text = "Назад";
+            this.BackToFormButton.UseVisualStyleBackColor = true;
+            this.BackToFormButton.Click += new System.EventHandler(this.BackToFormButton_Click);
+            // 
             // UserPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(14)))), ((int)(((byte)(25)))));
             this.ClientSize = new System.Drawing.Size(1033, 574);
+            this.Controls.Add(this.BackToFormButton);
             this.Controls.Add(this.optionUserButton);
             this.Controls.Add(this.labelNameList);
             this.Controls.Add(this.tableLayoutPanelMovie);
@@ -181,5 +193,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanelMovie;
         private System.Windows.Forms.Label labelNameList;
         private System.Windows.Forms.PictureBox optionUserButton;
+        private System.Windows.Forms.Button BackToFormButton;
     }
 }

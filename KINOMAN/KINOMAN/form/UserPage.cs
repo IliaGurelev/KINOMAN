@@ -30,7 +30,9 @@ namespace KINOMAN.form
         int startPositionListFilms = 0;
         int filmCount = 0;
 
-        public UserPage(string[] dataUserTableInput)
+        Form PrevForm;
+
+        public UserPage(string[] dataUserTableInput, Form PrevForm)
         {
             InitializeComponent();
 
@@ -40,11 +42,13 @@ namespace KINOMAN.form
             imageUserId = dataUserTable[3];
 
             tableLayoutPanelMovie.BackColor = Color.FromArgb(16, 14, 25);
+
+            this.PrevForm = PrevForm;
         }
 
         private void UserPage_Load(object sender, EventArgs e)
         {
-            userLoginElement.Text = loginUser;
+               userLoginElement.Text = loginUser;
             userIconElement.Image = ConverterImageFromURL.ConvertImageFromURL(
                 UserData.GetIconUrlUser(imageUserId));
 
@@ -77,9 +81,9 @@ namespace KINOMAN.form
 
         private void optionUserButton_Click(object sender, EventArgs e)
         {
-            UserOptionPage userOption = new UserOptionPage(dataUserTable);
+            UserOptionPage userOption = new UserOptionPage(dataUserTable, this);
             userOption.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void RenderMovieList(List<FilmData.Item> filmData, TableLayoutPanel container)
@@ -117,6 +121,11 @@ namespace KINOMAN.form
 
                 position++;
             }
+        }
+
+        private void BackToFormButton_Click(object sender, EventArgs e)
+        {
+            BackToForm.BackToPrevForm(PrevForm, this);
         }
     }
 }

@@ -34,6 +34,7 @@
             this.addWatched = new System.Windows.Forms.Button();
             this.addFavorite = new System.Windows.Forms.Button();
             this.descriptionMovie = new System.Windows.Forms.TextBox();
+            this.DeleteButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFilm)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,19 +60,26 @@
             // 
             // addWatched
             // 
-            this.addWatched.Location = new System.Drawing.Point(453, 489);
+            this.addWatched.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(14)))), ((int)(((byte)(25)))));
+            this.addWatched.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addWatched.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.addWatched.ForeColor = System.Drawing.Color.IndianRed;
+            this.addWatched.Location = new System.Drawing.Point(453, 497);
             this.addWatched.Name = "addWatched";
-            this.addWatched.Size = new System.Drawing.Size(277, 45);
+            this.addWatched.Size = new System.Drawing.Size(177, 37);
             this.addWatched.TabIndex = 3;
             this.addWatched.Text = "Просмотренно";
-            this.addWatched.UseVisualStyleBackColor = true;
+            this.addWatched.UseVisualStyleBackColor = false;
             this.addWatched.Click += new System.EventHandler(this.addWatched_Click);
             // 
             // addFavorite
             // 
-            this.addFavorite.Location = new System.Drawing.Point(748, 489);
+            this.addFavorite.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addFavorite.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.addFavorite.ForeColor = System.Drawing.Color.IndianRed;
+            this.addFavorite.Location = new System.Drawing.Point(818, 497);
             this.addFavorite.Name = "addFavorite";
-            this.addFavorite.Size = new System.Drawing.Size(273, 45);
+            this.addFavorite.Size = new System.Drawing.Size(202, 37);
             this.addFavorite.TabIndex = 4;
             this.addFavorite.Text = "Добавить в избранное";
             this.addFavorite.UseVisualStyleBackColor = true;
@@ -84,12 +92,25 @@
             this.descriptionMovie.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.descriptionMovie.ForeColor = System.Drawing.Color.White;
             this.descriptionMovie.Location = new System.Drawing.Point(453, 83);
+            this.descriptionMovie.MaxLength = 1200;
             this.descriptionMovie.Multiline = true;
             this.descriptionMovie.Name = "descriptionMovie";
             this.descriptionMovie.ReadOnly = true;
-            this.descriptionMovie.Size = new System.Drawing.Size(567, 328);
+            this.descriptionMovie.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.descriptionMovie.Size = new System.Drawing.Size(567, 350);
             this.descriptionMovie.TabIndex = 5;
             this.descriptionMovie.Text = resources.GetString("descriptionMovie.Text");
+            this.descriptionMovie.TextChanged += new System.EventHandler(this.descriptionMovie_TextChanged);
+            // 
+            // DeleteButton
+            // 
+            this.DeleteButton.Location = new System.Drawing.Point(922, 12);
+            this.DeleteButton.Name = "DeleteButton";
+            this.DeleteButton.Size = new System.Drawing.Size(98, 26);
+            this.DeleteButton.TabIndex = 6;
+            this.DeleteButton.Text = "Удалить";
+            this.DeleteButton.UseVisualStyleBackColor = true;
+            this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
             // 
             // MoviePage
             // 
@@ -97,6 +118,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(14)))), ((int)(((byte)(25)))));
             this.ClientSize = new System.Drawing.Size(1033, 567);
+            this.Controls.Add(this.DeleteButton);
             this.Controls.Add(this.descriptionMovie);
             this.Controls.Add(this.addFavorite);
             this.Controls.Add(this.addWatched);
@@ -119,5 +141,6 @@
         private System.Windows.Forms.Button addWatched;
         private System.Windows.Forms.Button addFavorite;
         private System.Windows.Forms.TextBox descriptionMovie;
+        private System.Windows.Forms.Button DeleteButton;
     }
 }

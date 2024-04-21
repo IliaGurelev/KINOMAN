@@ -121,5 +121,36 @@ namespace KINOMAN.api
                 }
             }
         }
+
+        static public void DeleteMovieByID(string id)
+        {
+            string connString = ConnectStringDB.GetConnetctString();
+
+            using (var conn = new NpgsqlConnection(connString))
+            {
+                try
+                {
+                    // Открытие подключения
+                    conn.Open();
+
+                    // Создание SQL-запроса INSERT
+                    string sql = "DELETE FROM movie WHERE id = @param1";
+
+                    // Создание команды с использованием SQL-запроса и подключения
+                    using (var cmd = new NpgsqlCommand(sql, conn))
+                    {
+                        // Добавление параметров к команде
+                        cmd.Parameters.AddWithValue("param1", id);
+
+                        // Выполнение команды (вставка данных)
+                        int rowsAffected = cmd.ExecuteNonQuery();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Ошибка связи при добавлении в просмотренное: " + ex);
+                }
+            }
+        }
     }
 }
