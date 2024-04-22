@@ -1,4 +1,5 @@
 ﻿using KINOMAN.api;
+using KINOMAN.utils;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,9 +14,11 @@ namespace KINOMAN
 {
     public partial class LogIn : Form
     {
-        public LogIn()
+        Form PrevForm;
+        public LogIn(Form PrevForm)
         {
             InitializeComponent();
+            this.PrevForm = PrevForm;
         }
 
         private void LogIn_Load(object sender, EventArgs e)
@@ -41,7 +44,7 @@ namespace KINOMAN
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-
+            BackToForm.BackToPrevForm(PrevForm, this);
         }
     }
 }

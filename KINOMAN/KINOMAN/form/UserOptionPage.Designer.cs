@@ -36,6 +36,7 @@
             this.editPasswordButton = new System.Windows.Forms.PictureBox();
             this.editLoginButton = new System.Windows.Forms.PictureBox();
             this.userIconPictureBox = new System.Windows.Forms.PictureBox();
+            this.BackToFormButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.editPasswordButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.editLoginButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userIconPictureBox)).BeginInit();
@@ -137,12 +138,23 @@
             this.userIconPictureBox.TabIndex = 2;
             this.userIconPictureBox.TabStop = false;
             // 
+            // BackToFormButton
+            // 
+            this.BackToFormButton.Location = new System.Drawing.Point(525, 322);
+            this.BackToFormButton.Name = "BackToFormButton";
+            this.BackToFormButton.Size = new System.Drawing.Size(102, 23);
+            this.BackToFormButton.TabIndex = 11;
+            this.BackToFormButton.Text = "Назад";
+            this.BackToFormButton.UseVisualStyleBackColor = true;
+            this.BackToFormButton.Click += new System.EventHandler(this.BackToFormButton_Click);
+            // 
             // UserOptionPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(14)))), ((int)(((byte)(25)))));
             this.ClientSize = new System.Drawing.Size(639, 357);
+            this.Controls.Add(this.BackToFormButton);
             this.Controls.Add(this.editPasswordButton);
             this.Controls.Add(this.editLoginButton);
             this.Controls.Add(this.passwordUserTextBox);
@@ -174,5 +186,6 @@
         private System.Windows.Forms.TextBox passwordUserTextBox;
         private System.Windows.Forms.PictureBox editLoginButton;
         private System.Windows.Forms.PictureBox editPasswordButton;
+        private System.Windows.Forms.Button BackToFormButton;
     }
 }

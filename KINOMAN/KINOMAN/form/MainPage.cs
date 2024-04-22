@@ -34,18 +34,19 @@ namespace KINOMAN
             this.Size = new Size(1661, 973);
         }
 
-        int timeLeft = 25;
         int startPositionListFilms = 0;
         int filmCount = 0;
 
         List<FilmData.Item> filmData;
 
-        private void MainPage_Load(object sender, EventArgs e)
+        private void MainPage_Activated(object sender, EventArgs e)
         {
             tableLayoutPanel1.BackColor = Color.FromArgb(16, 14, 25);
 
             filmData = new FilmData().GetMovie();
             filmCount = filmData.Count;
+
+            clearTable.clearFlowLayoutPanel(filmContainer);
 
             Render_Page(filmData);
 
@@ -56,7 +57,6 @@ namespace KINOMAN
             }
         }
 
-     
 
         private void Render_Page(List<FilmData.Item> filmData)
         {
@@ -108,6 +108,8 @@ namespace KINOMAN
             }
         }
 
+
+
         /*private void Render_Film(List<FilmData.Item> films, TableLayoutPanel container)
         {
             int position = 1;
@@ -141,13 +143,14 @@ namespace KINOMAN
             SignUpButton.Dispose();
 
             var (iconUser, loginUser) = UserComponent.CreateUserElement(dataUserTableInput);
-            loginUser.AutoSize = false;
-            loginUser.Size = new Size(250, 25);
-            loginUser.Location = new Point(744, 6);
-            loginUser.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 
             iconUser.Size = new Size(31, 29);
-            iconUser.Location = new Point(998, 3);
+            iconUser.Location = new Point(1184, 3);
+
+            loginUser.AutoSize = false;
+            loginUser.Size = new Size(250, 25);
+            loginUser.Location = new Point(iconUser.Location.X - 254, 6);
+            loginUser.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
 
             loginUser.Click += (sender, e) => UserElement_Click(sender, e, dataUserTableInput);
             iconUser.Click += (sender, e) => UserElement_Click(sender, e, dataUserTableInput);
@@ -161,7 +164,7 @@ namespace KINOMAN
 
         private void UserElement_Click(object sender, EventArgs e, string[] dataUserTableInput)
         {
-            UserPage userPage = new UserPage(dataUserTableInput);
+            UserPage userPage = new UserPage(dataUserTableInput, this);
             userPage.Show();
 
             this.Hide();
@@ -193,16 +196,27 @@ namespace KINOMAN
 
         private void LogInButton_Click(object sender, EventArgs e)
         {
-            LogIn loginForm = new LogIn();
+            LogIn loginForm = new LogIn(this);
             loginForm.Show();
             this.Hide();
         }
 
         private void SignUpButton_Click(object sender, EventArgs e)
         {
-            SignUp signUpForm = new SignUp();
+            SignUp signUpForm = new SignUp(this);
             signUpForm.Show();
             this.Hide();
+        }
+
+        private void AppendMovieButton_Click(object sender, EventArgs e)
+        {
+            AppendMoviePage appendMovieForm = new AppendMoviePage();
+            appendMovieForm.Show();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

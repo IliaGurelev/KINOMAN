@@ -9,6 +9,12 @@ namespace KINOMAN.api
 {
     internal class iconsData
     {
+        public class IconData
+        {
+            public string Id { get; set; }
+            public string ImageUrl { get; set; }
+        }
+
         static public List<string> getIconsURL()
         {
             List<string> icons = new List<string>();
@@ -28,6 +34,42 @@ namespace KINOMAN.api
                         while (reader.Read())
                         {
                             icons.Add(reader.GetString(0));
+                        }
+
+                        return icons;
+                    }
+                }
+            }
+        }
+
+        static public List<IconData> getIconsData()
+        {
+            List<IconData> icons = new List<IconData>();
+
+            string connString = ConnectStringDB.GetConnetctString();
+
+            using (NpgsqlConnection conn = new NpgsqlConnection(connString))
+            {
+                conn.Open();
+
+                string sql = "SELECT id, image_url FROM icons";
+
+                using (NpgsqlCommand cmd = new NpgsqlCommand(sql, conn))
+                {
+                    using (NpgsqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            string idIcon = reader.GetString(0);
+                            string imageUrl = reader.GetString(1);
+
+                            IconData iconData = new IconData
+                            {
+                                Id = idIcon,
+                                ImageUrl = imageUrl,
+                            };
+
+                            icons.Add(iconData);
                         }
 
                         return icons;

@@ -20,18 +20,23 @@ namespace KINOMAN.form
     {
         string[] dataUserTable;
 
+        string idUser;
         string imageUserId;
         string loginUser;
         string passwordUser;
 
-        public UserOptionPage(string[] dataUserTableInput)
+        Form PrevForm;
+        public UserOptionPage(string[] dataUserTableInput, Form prevForm)
         {
             InitializeComponent();
 
             dataUserTable = dataUserTableInput;
-            imageUserId = dataUserTable[3];
+            idUser = dataUserTable[0];
             loginUser = dataUserTable[1];
             passwordUser = dataUserTable[2];
+            imageUserId = dataUserTable[3];
+
+            PrevForm = prevForm;
         }
 
         private void UserOptionPage_Load(object sender, EventArgs e)
@@ -46,26 +51,34 @@ namespace KINOMAN.form
             loginUserTextBox.ForeColor = Color.White;
         }
 
-        private static void RenderIcon(TableLayoutPanel container)
+        private void RenderIcon(TableLayoutPanel container)
         {
-            List<string> icons = iconsData.getIconsURL().GetRange(0, 7);
+            List<iconsData.IconData> icons = iconsData.getIconsData().GetRange(0, 7);
 
             int position = 1;
 
-            foreach (string icon in icons)
+            foreach (iconsData.IconData icon in icons)
             {         
                 int[] positionIcon = UserPageOption.INDEX_IMAGE_OPTION_TABLE_LAYOUT()[position];
                 PictureBox iconPictureBox = new PictureBox();
-                iconPictureBox.Image = ConverterImageFromURL.ConvertImageFromURL(icon);
+                iconPictureBox.Image = ConverterImageFromURL.ConvertImageFromURL(icon.ImageUrl);
                 iconPictureBox.SizeMode = PictureBoxSizeMode.Zoom;
                 iconPictureBox.Size = new Size(100, 100);
-                //filmCard.Item1.Click += (sender, e) => MovieCardClick.MovieCardHandler_Click(sender, e, movieData, dataUserTable);
+
+                iconPictureBox.Click += (sender, e) => UpdateUserIcon(sender, e, idUser, icon.Id, iconPictureBox);
+
                 iconPictureBox.Cursor = Cursors.Hand;
 
                 container.Controls.Add(iconPictureBox, positionIcon[0], positionIcon[1]);
 
                 position++;
             }
+        }
+        
+        private void UpdateUserIcon(object sender, EventArgs e, string IdUser, string IdIcon, PictureBox senderPictureBox)
+        {
+            UserData.UpdateUserIcon(IdUser, IdIcon);
+            senderPictureBox.BorderStyle = BorderStyle.FixedSingle;
         }
 
         private void editLoginButton_Click(object sender, EventArgs e)
@@ -112,6 +125,11 @@ namespace KINOMAN.form
                 //textBox.KeyDown -= TextBoxHandler_KeyDown();
                 MessageBox.Show("Enter");
             }
+        }
+
+        private void BackToFormButton_Click(object sender, EventArgs e)
+        {
+            BackToForm.BackToPrevForm(PrevForm, this);
         }
     }
 }

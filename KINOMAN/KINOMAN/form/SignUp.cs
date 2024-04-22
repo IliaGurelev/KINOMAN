@@ -14,9 +14,12 @@ namespace KINOMAN.form
 {
     public partial class SignUp : Form
     {
-        public SignUp()
+        Form PrevForm;
+        public SignUp(Form PrevForm)
         {
             InitializeComponent();
+
+            this.PrevForm = PrevForm;
         }
 
         private void loginButton_Click(object sender, EventArgs e)
@@ -29,14 +32,21 @@ namespace KINOMAN.form
                     string login = loginTextBox.Text;
                     string password = passwordTextBox.Text;
 
-                    UserData.InsertUser(id, login, password);
+                    if (!UserData.CheckLoginUniqueUser(login))
+                    {
+                        MessageBox.Show($"Логин {login} уже занят");
+                    }
+                    else
+                    {
+                        UserData.InsertUser(id, login, password);
 
-                    MainPage mainPage = new MainPage(UserData.GetUser(loginTextBox.Text));
-                    mainPage.Show();
+                        MainPage mainPage = new MainPage(UserData.GetUser(loginTextBox.Text));
+                        mainPage.Show();
 
-                    this.Close();
+                        this.Close();
 
-                    MessageBox.Show("Успешная регистрация!");
+                        MessageBox.Show("Успешная регистрация!");
+                    }                  
                 }
                 else
                 {
@@ -47,6 +57,11 @@ namespace KINOMAN.form
             {
                 MessageBox.Show("Заполните поле [Логин]");
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            BackToForm.BackToPrevForm(PrevForm, this);
         }
     }
 }

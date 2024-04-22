@@ -49,6 +49,7 @@ namespace KINOMAN
             if(_idUser != null)
             {
                 FilmData.InsertWatchedMovie(IdGenerator.idGenerate(), _idUser, _idMovie);
+                addWatched.BackColor = Color.FromArgb(14, 24, 72);
             }
         }
 
@@ -58,6 +59,17 @@ namespace KINOMAN
             {
                 FilmData.InsertFavoriteMovie(IdGenerator.idGenerate(), _idUser, _idMovie);
             }
+        }
+
+        private void descriptionMovie_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DeleteButton_Click(object sender, EventArgs e)
+        {
+            FilmData.DeleteMovieByID(_idMovie);
+            this.Close();
         }
     }
 }

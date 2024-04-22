@@ -37,6 +37,7 @@
             this.paginationBackButton = new System.Windows.Forms.PictureBox();
             this.paginationNextButton = new System.Windows.Forms.PictureBox();
             this.filmContainer = new System.Windows.Forms.FlowLayoutPanel();
+            this.AppendMovieButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.paginationBackButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.paginationNextButton)).BeginInit();
@@ -52,8 +53,8 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(1618, 903);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(1619, 903);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 258F));
@@ -66,7 +67,7 @@
             // SignUpButton
             // 
             this.SignUpButton.Location = new System.Drawing.Point(1445, 5);
-            this.SignUpButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SignUpButton.Margin = new System.Windows.Forms.Padding(4);
             this.SignUpButton.Name = "SignUpButton";
             this.SignUpButton.Size = new System.Drawing.Size(184, 28);
             this.SignUpButton.TabIndex = 10;
@@ -77,7 +78,7 @@
             // LogInButton
             // 
             this.LogInButton.Location = new System.Drawing.Point(1244, 4);
-            this.LogInButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.LogInButton.Margin = new System.Windows.Forms.Padding(4);
             this.LogInButton.Name = "LogInButton";
             this.LogInButton.Size = new System.Drawing.Size(193, 30);
             this.LogInButton.TabIndex = 11;
@@ -96,18 +97,19 @@
             // 
             this.pictureBox1.Image = global::KINOMAN.Properties.Resources.logo;
             this.pictureBox1.Location = new System.Drawing.Point(16, 4);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(179, 30);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // paginationBackButton
             // 
             this.paginationBackButton.Image = ((System.Drawing.Image)(resources.GetObject("paginationBackButton.Image")));
             this.paginationBackButton.Location = new System.Drawing.Point(407, 873);
-            this.paginationBackButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.paginationBackButton.Margin = new System.Windows.Forms.Padding(4);
             this.paginationBackButton.Name = "paginationBackButton";
             this.paginationBackButton.Size = new System.Drawing.Size(214, 39);
             this.paginationBackButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -119,7 +121,7 @@
             // 
             this.paginationNextButton.Image = ((System.Drawing.Image)(resources.GetObject("paginationNextButton.Image")));
             this.paginationNextButton.Location = new System.Drawing.Point(955, 873);
-            this.paginationNextButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.paginationNextButton.Margin = new System.Windows.Forms.Padding(4);
             this.paginationNextButton.Name = "paginationNextButton";
             this.paginationNextButton.Size = new System.Drawing.Size(214, 39);
             this.paginationNextButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -131,16 +133,29 @@
             // 
             this.filmContainer.AutoScroll = true;
             this.filmContainer.Location = new System.Drawing.Point(16, 81);
+            this.filmContainer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.filmContainer.Name = "filmContainer";
             this.filmContainer.Size = new System.Drawing.Size(1613, 785);
             this.filmContainer.TabIndex = 16;
+            // 
+            // AppendMovieButton
+            // 
+            this.AppendMovieButton.Location = new System.Drawing.Point(16, 41);
+            this.AppendMovieButton.Margin = new System.Windows.Forms.Padding(4);
+            this.AppendMovieButton.Name = "AppendMovieButton";
+            this.AppendMovieButton.Size = new System.Drawing.Size(193, 30);
+            this.AppendMovieButton.TabIndex = 17;
+            this.AppendMovieButton.Text = "Добавить фильм";
+            this.AppendMovieButton.UseVisualStyleBackColor = true;
+            this.AppendMovieButton.Click += new System.EventHandler(this.AppendMovieButton_Click);
             // 
             // MainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(14)))), ((int)(((byte)(25)))));
-            this.ClientSize = new System.Drawing.Size(1643, 926);
+            this.ClientSize = new System.Drawing.Size(1643, 924);
+            this.Controls.Add(this.AppendMovieButton);
             this.Controls.Add(this.filmContainer);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.SignUpButton);
@@ -149,12 +164,12 @@
             this.Controls.Add(this.paginationNextButton);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.MaximumSize = new System.Drawing.Size(1661, 973);
-            this.MinimumSize = new System.Drawing.Size(1533, 820);
+            this.MaximumSize = new System.Drawing.Size(1661, 971);
+            this.MinimumSize = new System.Drawing.Size(1533, 819);
             this.Name = "MainPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Главная";
-            this.Load += new System.EventHandler(this.MainPage_Load);
+            this.Activated += new System.EventHandler(this.MainPage_Activated);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.paginationBackButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.paginationNextButton)).EndInit();
@@ -172,6 +187,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private Npgsql.NpgsqlDataAdapter npgsqlDataAdapter1;
         private System.Windows.Forms.FlowLayoutPanel filmContainer;
+        private System.Windows.Forms.Button AppendMovieButton;
     }
 }
 

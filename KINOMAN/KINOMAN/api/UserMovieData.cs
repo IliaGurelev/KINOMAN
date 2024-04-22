@@ -9,6 +9,32 @@ namespace KINOMAN.api
 {
     internal class UserMovieData
     {
+        static public bool CheckFavoriteMovieInUser(string loginInput)
+        {
+            string connString = ConnectStringDB.GetConnetctString();
+
+            using (NpgsqlConnection conn = new NpgsqlConnection(connString))
+            {
+                conn.Open();
+
+                string sql = "SELECT movie.id FROM favorite_movie WHERE logins = '" + loginInput + "'";
+
+                using (NpgsqlCommand cmd = new NpgsqlCommand(sql, conn))
+                {
+                    using (NpgsqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            return false;
+                        }
+                        else
+                        {
+                            return true;
+                        }
+                    }
+                }
+            }
+        }
         static public List<FilmData.Item> getFavoriteMovie(string idUser)
         {
             string connString = ConnectStringDB.GetConnetctString();

@@ -31,7 +31,7 @@ namespace KINOMAN.api
                             string id = reader.GetString(0);
                             string login = reader.GetString(1);
                             string password = reader.GetString(2);
-                            string icon = reader.GetInt32(3).ToString();
+                            string icon = reader.GetString(3);
 
                             string[] userData = { id, login, password, icon};
 
@@ -82,6 +82,32 @@ namespace KINOMAN.api
             }
         }
 
+        static public bool CheckLoginUniqueUser(string loginInput)
+        {
+            string connString = ConnectStringDB.GetConnetctString();
+
+            using (NpgsqlConnection conn = new NpgsqlConnection(connString))
+            {
+                conn.Open();
+
+                string sql = "SELECT logins FROM users WHERE logins = '" + loginInput + "'";
+
+                using (NpgsqlCommand cmd = new NpgsqlCommand(sql, conn))
+                {
+                    using (NpgsqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            return false;
+                        }
+                        else
+                        {
+                            return true;
+                        }
+                    }
+                }
+            }
+        }
         static public void InsertUser(string idInput, string loginInput, string passwordInput)
         {
             string connString = ConnectStringDB.GetConnetctString();
@@ -142,6 +168,38 @@ namespace KINOMAN.api
                             return imageUrl;
                         }
                     }
+                }
+            }
+        }
+
+        static public void UpdateUserIcon(string idUser, string idIcon)
+        {
+            string connString = ConnectStringDB.GetConnetctString();
+
+            using (var conn = new NpgsqlConnection(connString))
+            {
+                try
+                {
+                    // Открытие подключения
+                    conn.Open();
+
+                    // Создание SQL-запроса INSERT
+                    string sql = "UPDATE users SET icon = @paramIcon WHERE id = @paramUser";
+
+                    // Создание команды с использованием SQL-запроса и подключения
+                    using (var cmd = new NpgsqlCommand(sql, conn))
+                    {
+                        // Добавление параметров к команде
+                        cmd.Parameters.AddWithValue("paramIcon", idIcon);
+                        cmd.Parameters.AddWithValue("paramUser", idUser);
+
+                        // Выполнение команды (вставка данных)
+                        int rowsAffected = cmd.ExecuteNonQuery();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Ошибка регестрации, возможно ваш логин уже занят или " + ex);
                 }
             }
         }
