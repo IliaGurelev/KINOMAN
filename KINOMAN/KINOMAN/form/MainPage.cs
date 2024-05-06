@@ -214,11 +214,14 @@ namespace KINOMAN
             appendMovieForm.Show();
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }
+=======
+>>>>>>> 1f3c3d44a6ff2e1a253510c3a33f02a3f5204fc0
 =======
 >>>>>>> 1f3c3d44a6ff2e1a253510c3a33f02a3f5204fc0
     }

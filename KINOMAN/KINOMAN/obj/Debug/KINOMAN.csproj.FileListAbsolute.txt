@@ -98,6 +98,7 @@ Z:\!Обмен\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопои
 Z:\!Обмен\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\obj\Debug\KINOMAN.csproj.CopyComplete
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 Z:\ОБМЕН\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\obj\Debug\KINOMAN.csproj.AssemblyReference.cache
 Z:\ОБМЕН\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\obj\Debug\KINOMAN.csproj.SuggestedBindingRedirects.cache
 Z:\ОБМЕН\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\obj\Debug\KINOMAN.LogIn.resources
@@ -113,6 +114,8 @@ Z:\ОБМЕН\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопои�
 Z:\ОБМЕН\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\obj\Debug\KINOMAN.exe
 Z:\ОБМЕН\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\obj\Debug\KINOMAN.pdb
 =======
+=======
+>>>>>>> 1f3c3d44a6ff2e1a253510c3a33f02a3f5204fc0
 =======
 >>>>>>> 1f3c3d44a6ff2e1a253510c3a33f02a3f5204fc0
 E:\База знаний\Проекты\KINOMAN\KINOMAN\KINOMAN\bin\Debug\KINOMAN.exe.config
@@ -168,11 +171,14 @@ E:\База знаний\Проекты\KINOMAN\KINOMAN\KINOMAN\bin\Debug\Newton
 E:\База знаний\Проекты\KINOMAN\KINOMAN\KINOMAN\bin\Debug\Newtonsoft.Json.xml
 E:\База знаний\Проекты\KINOMAN\KINOMAN\KINOMAN\obj\Debug\KINOMAN.form.AppendMoviePage.resources
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 1f3c3d44a6ff2e1a253510c3a33f02a3f5204fc0
 Z:\!Обмен\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\bin\Debug\Krypton.Toolkit.dll
 Z:\!Обмен\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\bin\Debug\Newtonsoft.Json.dll
 Z:\!Обмен\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\bin\Debug\Krypton.Toolkit.xml
 Z:\!Обмен\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\bin\Debug\Newtonsoft.Json.xml
 Z:\!Обмен\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\obj\Debug\KINOMAN.form.AppendMoviePage.resources
+=======
+>>>>>>> 1f3c3d44a6ff2e1a253510c3a33f02a3f5204fc0
 =======
 >>>>>>> 1f3c3d44a6ff2e1a253510c3a33f02a3f5204fc0

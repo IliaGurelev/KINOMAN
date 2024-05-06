@@ -54,8 +54,12 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.tableLayoutPanel1.Location = new System.Drawing.Point(1619, 903);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
+=======
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(1214, 734);
+>>>>>>> 1f3c3d44a6ff2e1a253510c3a33f02a3f5204fc0
 =======
             this.tableLayoutPanel1.Location = new System.Drawing.Point(1214, 734);
 >>>>>>> 1f3c3d44a6ff2e1a253510c3a33f02a3f5204fc0
@@ -71,8 +75,12 @@
             // SignUpButton
             // 
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.SignUpButton.Location = new System.Drawing.Point(1445, 5);
             this.SignUpButton.Margin = new System.Windows.Forms.Padding(4);
+=======
+            this.SignUpButton.Location = new System.Drawing.Point(1084, 4);
+>>>>>>> 1f3c3d44a6ff2e1a253510c3a33f02a3f5204fc0
 =======
             this.SignUpButton.Location = new System.Drawing.Point(1084, 4);
 >>>>>>> 1f3c3d44a6ff2e1a253510c3a33f02a3f5204fc0
@@ -86,8 +94,12 @@
             // LogInButton
             // 
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.LogInButton.Location = new System.Drawing.Point(1244, 4);
             this.LogInButton.Margin = new System.Windows.Forms.Padding(4);
+=======
+            this.LogInButton.Location = new System.Drawing.Point(933, 3);
+>>>>>>> 1f3c3d44a6ff2e1a253510c3a33f02a3f5204fc0
 =======
             this.LogInButton.Location = new System.Drawing.Point(933, 3);
 >>>>>>> 1f3c3d44a6ff2e1a253510c3a33f02a3f5204fc0
@@ -109,8 +121,12 @@
             // 
             this.pictureBox1.Image = global::KINOMAN.Properties.Resources.logo;
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.pictureBox1.Location = new System.Drawing.Point(16, 4);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+=======
+            this.pictureBox1.Location = new System.Drawing.Point(12, 3);
+>>>>>>> 1f3c3d44a6ff2e1a253510c3a33f02a3f5204fc0
 =======
             this.pictureBox1.Location = new System.Drawing.Point(12, 3);
 >>>>>>> 1f3c3d44a6ff2e1a253510c3a33f02a3f5204fc0
@@ -125,8 +141,12 @@
             // 
             this.paginationBackButton.Image = ((System.Drawing.Image)(resources.GetObject("paginationBackButton.Image")));
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.paginationBackButton.Location = new System.Drawing.Point(407, 873);
             this.paginationBackButton.Margin = new System.Windows.Forms.Padding(4);
+=======
+            this.paginationBackButton.Location = new System.Drawing.Point(305, 709);
+>>>>>>> 1f3c3d44a6ff2e1a253510c3a33f02a3f5204fc0
 =======
             this.paginationBackButton.Location = new System.Drawing.Point(305, 709);
 >>>>>>> 1f3c3d44a6ff2e1a253510c3a33f02a3f5204fc0
@@ -141,8 +161,12 @@
             // 
             this.paginationNextButton.Image = ((System.Drawing.Image)(resources.GetObject("paginationNextButton.Image")));
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.paginationNextButton.Location = new System.Drawing.Point(955, 873);
             this.paginationNextButton.Margin = new System.Windows.Forms.Padding(4);
+=======
+            this.paginationNextButton.Location = new System.Drawing.Point(716, 709);
+>>>>>>> 1f3c3d44a6ff2e1a253510c3a33f02a3f5204fc0
 =======
             this.paginationNextButton.Location = new System.Drawing.Point(716, 709);
 >>>>>>> 1f3c3d44a6ff2e1a253510c3a33f02a3f5204fc0
@@ -157,8 +181,13 @@
             // 
             this.filmContainer.AutoScroll = true;
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.filmContainer.Location = new System.Drawing.Point(16, 81);
             this.filmContainer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+=======
+            this.filmContainer.Location = new System.Drawing.Point(12, 66);
+            this.filmContainer.Margin = new System.Windows.Forms.Padding(2);
+>>>>>>> 1f3c3d44a6ff2e1a253510c3a33f02a3f5204fc0
 =======
             this.filmContainer.Location = new System.Drawing.Point(12, 66);
             this.filmContainer.Margin = new System.Windows.Forms.Padding(2);
@@ -170,10 +199,16 @@
             // AppendMovieButton
             // 
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.AppendMovieButton.Location = new System.Drawing.Point(16, 41);
             this.AppendMovieButton.Margin = new System.Windows.Forms.Padding(4);
             this.AppendMovieButton.Name = "AppendMovieButton";
             this.AppendMovieButton.Size = new System.Drawing.Size(193, 30);
+=======
+            this.AppendMovieButton.Location = new System.Drawing.Point(12, 33);
+            this.AppendMovieButton.Name = "AppendMovieButton";
+            this.AppendMovieButton.Size = new System.Drawing.Size(145, 24);
+>>>>>>> 1f3c3d44a6ff2e1a253510c3a33f02a3f5204fc0
 =======
             this.AppendMovieButton.Location = new System.Drawing.Point(12, 33);
             this.AppendMovieButton.Name = "AppendMovieButton";
@@ -190,7 +225,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(14)))), ((int)(((byte)(25)))));
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(1643, 924);
+=======
+            this.ClientSize = new System.Drawing.Size(1232, 752);
+>>>>>>> 1f3c3d44a6ff2e1a253510c3a33f02a3f5204fc0
 =======
             this.ClientSize = new System.Drawing.Size(1232, 752);
 >>>>>>> 1f3c3d44a6ff2e1a253510c3a33f02a3f5204fc0
@@ -203,9 +242,15 @@
             this.Controls.Add(this.paginationNextButton);
             this.Controls.Add(this.tableLayoutPanel1);
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximumSize = new System.Drawing.Size(1661, 971);
             this.MinimumSize = new System.Drawing.Size(1533, 819);
+=======
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximumSize = new System.Drawing.Size(1250, 798);
+            this.MinimumSize = new System.Drawing.Size(1154, 674);
+>>>>>>> 1f3c3d44a6ff2e1a253510c3a33f02a3f5204fc0
 =======
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximumSize = new System.Drawing.Size(1250, 798);
