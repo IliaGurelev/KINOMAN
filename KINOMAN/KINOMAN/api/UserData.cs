@@ -82,6 +82,40 @@ namespace KINOMAN.api
             }
         }
 
+        static public bool CheckAdminRole(string loginInput)
+        {
+            string connString = ConnectStringDB.GetConnetctString();
+
+            using (NpgsqlConnection conn = new NpgsqlConnection(connString))
+            {
+                conn.Open();
+
+                string sql = "SELECT roles.name_role FROM users JOIN roles ON users.role = roles.id WHERE logins = '" + loginInput + "'";
+
+                using (NpgsqlCommand cmd = new NpgsqlCommand(sql, conn))
+                {
+                    using (NpgsqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            string role = reader.GetString(0);
+
+                            if (role == "admin")
+                            {
+                                return true;
+                            }
+
+                            return false;
+                        }
+                        else
+                        {
+                            return false;
+                        }
+                    }
+                }
+            }
+        }
+
         static public bool CheckLoginUniqueUser(string loginInput)
         {
             string connString = ConnectStringDB.GetConnetctString();

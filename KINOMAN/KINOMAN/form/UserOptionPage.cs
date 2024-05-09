@@ -25,8 +25,8 @@ namespace KINOMAN.form
         string loginUser;
         string passwordUser;
 
-        Form PrevForm;
-        public UserOptionPage(string[] dataUserTableInput, Form prevForm)
+        UserPage PrevUserForm;
+        public UserOptionPage(string[] dataUserTableInput, UserPage prevUserForm)
         {
             InitializeComponent();
 
@@ -36,7 +36,7 @@ namespace KINOMAN.form
             passwordUser = dataUserTable[2];
             imageUserId = dataUserTable[3];
 
-            PrevForm = prevForm;
+            PrevUserForm = prevUserForm;
         }
 
         private void UserOptionPage_Load(object sender, EventArgs e)
@@ -54,7 +54,7 @@ namespace KINOMAN.form
         private void RenderIcon(TableLayoutPanel container)
         {
             List<iconsData.IconData> icons = iconsData.getIconsData().GetRange(0, 7);
-
+            List<PictureBox> listIconsPictureBox = new List<PictureBox>();
             int position = 1;
 
             foreach (iconsData.IconData icon in icons)
@@ -65,20 +65,32 @@ namespace KINOMAN.form
                 iconPictureBox.SizeMode = PictureBoxSizeMode.Zoom;
                 iconPictureBox.Size = new Size(100, 100);
 
-                iconPictureBox.Click += (sender, e) => UpdateUserIcon(sender, e, idUser, icon.Id, iconPictureBox);
+                iconPictureBox.Click += (sender, e) => {
+                    foreach(PictureBox iconPictureBox in listIconsPictureBox)
+                    {
+                        iconPictureBox.BorderStyle = BorderStyle.None; //ставит бордер на выбранную иконку
+                    }
+
+                    iconPictureBox.BorderStyle = BorderStyle.FixedSingle; //ставит бордер на выбранную иконку
+                    userIconPictureBox.Image = iconPictureBox.Image; //меняет иконку на выбранную
+
+                    UpdateUserIcon(sender, e, idUser, icon.Id);
+                };
 
                 iconPictureBox.Cursor = Cursors.Hand;
 
                 container.Controls.Add(iconPictureBox, positionIcon[0], positionIcon[1]);
 
+                listIconsPictureBox.Add(iconPictureBox);
+
                 position++;
             }
         }
         
-        private void UpdateUserIcon(object sender, EventArgs e, string IdUser, string IdIcon, PictureBox senderPictureBox)
+        private void UpdateUserIcon(object sender, EventArgs e, string IdUser, string IdIcon)
         {
-            UserData.UpdateUserIcon(IdUser, IdIcon);
-            senderPictureBox.BorderStyle = BorderStyle.FixedSingle;
+            UserData.UpdateUserIcon(IdUser, IdIcon); //меняю в базе данных
+            dataUserTable[3] = IdIcon;
         }
 
         private void editLoginButton_Click(object sender, EventArgs e)
@@ -129,7 +141,12 @@ namespace KINOMAN.form
 
         private void BackToFormButton_Click(object sender, EventArgs e)
         {
-            BackToForm.BackToPrevForm(PrevForm, this);
+            this.Close();
+        }
+
+        private void UserOptionPage_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            PrevUserForm.RecreateForm(dataUserTable);
         }
     }
 }

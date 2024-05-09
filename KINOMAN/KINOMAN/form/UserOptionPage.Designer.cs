@@ -167,6 +167,7 @@
             this.Name = "UserOptionPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Настройки профиля";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.UserOptionPage_FormClosed);
             this.Load += new System.EventHandler(this.UserOptionPage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.editPasswordButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.editLoginButton)).EndInit();

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.userIconElement = new System.Windows.Forms.PictureBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserPage));
             this.userLoginElement = new System.Windows.Forms.Label();
             this.openWatchedButton = new System.Windows.Forms.Button();
             this.openFavoriteButton = new System.Windows.Forms.Button();
@@ -36,20 +36,14 @@
             this.favoriteCountLabel = new System.Windows.Forms.Label();
             this.tableLayoutPanelMovie = new System.Windows.Forms.TableLayoutPanel();
             this.labelNameList = new System.Windows.Forms.Label();
-            this.optionUserButton = new System.Windows.Forms.PictureBox();
             this.BackToFormButton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.userIconElement)).BeginInit();
+            this.logOutButton = new System.Windows.Forms.PictureBox();
+            this.optionUserButton = new System.Windows.Forms.PictureBox();
+            this.userIconElement = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.logOutButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.optionUserButton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userIconElement)).BeginInit();
             this.SuspendLayout();
-            // 
-            // userIconElement
-            // 
-            this.userIconElement.Location = new System.Drawing.Point(12, 67);
-            this.userIconElement.Name = "userIconElement";
-            this.userIconElement.Size = new System.Drawing.Size(207, 207);
-            this.userIconElement.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.userIconElement.TabIndex = 0;
-            this.userIconElement.TabStop = false;
             // 
             // userLoginElement
             // 
@@ -57,7 +51,7 @@
             this.userLoginElement.ForeColor = System.Drawing.Color.White;
             this.userLoginElement.Location = new System.Drawing.Point(5, 9);
             this.userLoginElement.Name = "userLoginElement";
-            this.userLoginElement.Size = new System.Drawing.Size(244, 39);
+            this.userLoginElement.Size = new System.Drawing.Size(214, 39);
             this.userLoginElement.TabIndex = 1;
             this.userLoginElement.Text = "UserName";
             this.userLoginElement.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -134,26 +128,50 @@
             this.labelNameList.Text = "Просмотренно";
             this.labelNameList.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // optionUserButton
-            // 
-            this.optionUserButton.Image = global::KINOMAN.Properties.Resources.icons_option_user;
-            this.optionUserButton.Location = new System.Drawing.Point(12, 518);
-            this.optionUserButton.Name = "optionUserButton";
-            this.optionUserButton.Size = new System.Drawing.Size(41, 44);
-            this.optionUserButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.optionUserButton.TabIndex = 8;
-            this.optionUserButton.TabStop = false;
-            this.optionUserButton.Click += new System.EventHandler(this.optionUserButton_Click);
-            // 
             // BackToFormButton
             // 
             this.BackToFormButton.Location = new System.Drawing.Point(919, 541);
             this.BackToFormButton.Name = "BackToFormButton";
             this.BackToFormButton.Size = new System.Drawing.Size(102, 23);
             this.BackToFormButton.TabIndex = 9;
-            this.BackToFormButton.Text = "Назад";
+            this.BackToFormButton.Text = "На главную";
             this.BackToFormButton.UseVisualStyleBackColor = true;
             this.BackToFormButton.Click += new System.EventHandler(this.BackToFormButton_Click);
+            // 
+            // logOutButton
+            // 
+            this.logOutButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.logOutButton.Image = global::KINOMAN.Properties.Resources.logOut_icon;
+            this.logOutButton.InitialImage = global::KINOMAN.Properties.Resources.logOut_icon;
+            this.logOutButton.Location = new System.Drawing.Point(214, 18);
+            this.logOutButton.Name = "logOutButton";
+            this.logOutButton.Size = new System.Drawing.Size(35, 38);
+            this.logOutButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.logOutButton.TabIndex = 10;
+            this.logOutButton.TabStop = false;
+            this.logOutButton.Click += new System.EventHandler(this.logOutButton_Click);
+            // 
+            // optionUserButton
+            // 
+            this.optionUserButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.optionUserButton.Image = global::KINOMAN.Properties.Resources.setings_icon;
+            this.optionUserButton.InitialImage = ((System.Drawing.Image)(resources.GetObject("optionUserButton.InitialImage")));
+            this.optionUserButton.Location = new System.Drawing.Point(12, 530);
+            this.optionUserButton.Name = "optionUserButton";
+            this.optionUserButton.Size = new System.Drawing.Size(34, 32);
+            this.optionUserButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.optionUserButton.TabIndex = 8;
+            this.optionUserButton.TabStop = false;
+            this.optionUserButton.Click += new System.EventHandler(this.optionUserButton_Click);
+            // 
+            // userIconElement
+            // 
+            this.userIconElement.Location = new System.Drawing.Point(12, 67);
+            this.userIconElement.Name = "userIconElement";
+            this.userIconElement.Size = new System.Drawing.Size(207, 207);
+            this.userIconElement.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.userIconElement.TabIndex = 0;
+            this.userIconElement.TabStop = false;
             // 
             // UserPage
             // 
@@ -161,6 +179,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(14)))), ((int)(((byte)(25)))));
             this.ClientSize = new System.Drawing.Size(1033, 574);
+            this.Controls.Add(this.logOutButton);
             this.Controls.Add(this.BackToFormButton);
             this.Controls.Add(this.optionUserButton);
             this.Controls.Add(this.labelNameList);
@@ -174,9 +193,10 @@
             this.Name = "UserPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Профиль";
-            this.Load += new System.EventHandler(this.UserPage_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.userIconElement)).EndInit();
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.UserPage_FormClosed);
+            ((System.ComponentModel.ISupportInitialize)(this.logOutButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.optionUserButton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userIconElement)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -194,5 +214,6 @@
         private System.Windows.Forms.Label labelNameList;
         private System.Windows.Forms.PictureBox optionUserButton;
         private System.Windows.Forms.Button BackToFormButton;
+        private System.Windows.Forms.PictureBox logOutButton;
     }
 }

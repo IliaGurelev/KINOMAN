@@ -31,24 +31,32 @@ namespace KINOMAN.form
         int filmCount = 0;
 
         Form PrevForm;
+        MainPage PrevMainPage;
 
-        public UserPage(string[] dataUserTableInput, Form PrevForm)
+        public UserPage(string[] dataUserTableInput, Form PrevForm = null)
         {
             InitializeComponent();
 
+            UserPageLoadPage(dataUserTableInput);
+
+            tableLayoutPanelMovie.BackColor = Color.FromArgb(16, 14, 25);
+
+            this.PrevForm = PrevForm;
+
+            if(PrevForm is MainPage)
+            {
+                PrevMainPage = (MainPage)PrevForm;
+            } 
+        }
+
+        private void UserPageLoadPage(string[] dataUserTableInput)
+        {
             dataUserTable = dataUserTableInput;
             idUser = dataUserTable[0];
             loginUser = dataUserTable[1];
             imageUserId = dataUserTable[3];
 
-            tableLayoutPanelMovie.BackColor = Color.FromArgb(16, 14, 25);
-
-            this.PrevForm = PrevForm;
-        }
-
-        private void UserPage_Load(object sender, EventArgs e)
-        {
-               userLoginElement.Text = loginUser;
+            userLoginElement.Text = loginUser;
             userIconElement.Image = ConverterImageFromURL.ConvertImageFromURL(
                 UserData.GetIconUrlUser(imageUserId));
 
@@ -107,11 +115,12 @@ namespace KINOMAN.form
                 string nameFilm = film.Name;
                 string ImageFilm = film.ImageUrl;
                 string description = film.Description;
+                string watchUrl = film.WatchUrl;
 
                 Tuple<System.Windows.Forms.PictureBox, System.Windows.Forms.Label> filmCard =
                     new FilmCardComponent(ImageFilm, nameFilm).FilmCardCreateComponent();
 
-                string[] movieData = [film.Id.ToString(), film.Name, film.Description, film.ImageUrl];
+                string[] movieData = [film.Id.ToString(), nameFilm, description, ImageFilm, watchUrl];
 
                 filmCard.Item1.Click += (sender, e) => MovieCardClick.MovieCardHandler_Click(sender, e, movieData, dataUserTable);
                 filmCard.Item1.Cursor = Cursors.Hand;
@@ -125,7 +134,31 @@ namespace KINOMAN.form
 
         private void BackToFormButton_Click(object sender, EventArgs e)
         {
-            BackToForm.BackToPrevForm(PrevForm, this);
+            this.Close();  // Закрыть текущую форму
+        }
+
+        private void logOutButton_Click(object sender, EventArgs e)
+        {
+            if (PrevMainPage != null)
+            {
+                CredentialStorage.ClearCredentials();
+                dataUserTable = [];
+                this.Close();
+            }
+        }
+
+        private void UserPage_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            PrevMainPage.RecreateForm();
+        }
+
+        public void RecreateForm(string[] dataUserInput = null)
+        {
+            this.Controls.Clear();  // Удалить текущие контролы
+            InitializeComponent();  // Повторно инициализировать компоненты формы
+
+            UserPageLoadPage(dataUserInput);
+            this.Show();
         }
     }
 }

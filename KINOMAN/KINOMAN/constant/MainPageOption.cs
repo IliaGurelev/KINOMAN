@@ -8,7 +8,7 @@ namespace KINOMAN.constant
 {
     internal class MainPageOption
     {
-        public static readonly int MOVIE_SHOW_FILM = 30;
+        public static readonly int MOVIE_SHOW_FILM = 5;
 
         static public Dictionary<int, int[]> INDEX_IMAGE_TABLE_LAYOUT()
         {

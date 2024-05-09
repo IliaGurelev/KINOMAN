@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace KINOMAN
 {
@@ -18,6 +19,7 @@ namespace KINOMAN
         string _nameFilm;
         string _description;
         string _imageUrl;
+        string _watchUrl;
 
         string _idUser;
         public MoviePage(string[] filmDataTableInput, string[] dataUserTabel)
@@ -27,6 +29,7 @@ namespace KINOMAN
             _nameFilm = filmDataTableInput[1];
             _description = filmDataTableInput[2];
             _imageUrl = filmDataTableInput[3];
+            _watchUrl = filmDataTableInput[4];
 
             if(dataUserTabel != null )
             {
@@ -60,12 +63,20 @@ namespace KINOMAN
                 FilmData.InsertFavoriteMovie(IdGenerator.idGenerate(), _idUser, _idMovie);
             }
         }
-
-        private void descriptionMovie_TextChanged(object sender, EventArgs e)
+        private void watchButton_Click(object sender, EventArgs e)
         {
+            // Ссылка, которую вы хотите открыть
+            string url = _watchUrl;
 
+            try
+            {
+                Process.Start(new ProcessStartInfo(url) { UseShellExecute = true });
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Невозможно открыть ссылку: " + ex.Message);
+            }
         }
-
         private void DeleteButton_Click(object sender, EventArgs e)
         {
             FilmData.DeleteMovieByID(_idMovie);

@@ -12,6 +12,7 @@ namespace KINOMAN.utils
         static public void BackToPrevForm(Form preForm, Form currentForm)
         {
             preForm.Show();
+            preForm.Enabled = true;
             currentForm.Close();
         }
     }

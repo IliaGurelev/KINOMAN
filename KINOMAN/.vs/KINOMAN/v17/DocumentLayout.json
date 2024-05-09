@@ -1,12 +1,86 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "E:\\\u0411\u0430\u0437\u0430 \u0437\u043D\u0430\u043D\u0438\u0439\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B\\KINOMAN\\KINOMAN\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DB2E4EE2-D232-479A-A465-E8E078E94E8D}|KINOMAN\\KINOMAN.csproj|e:\\\u0431\u0430\u0437\u0430 \u0437\u043D\u0430\u043D\u0438\u0439\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B\\kinoman\\kinoman\\kinoman\\form\\useroptionpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB2E4EE2-D232-479A-A465-E8E078E94E8D}|KINOMAN\\KINOMAN.csproj|solutionrelative:kinoman\\form\\useroptionpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB2E4EE2-D232-479A-A465-E8E078E94E8D}|KINOMAN\\KINOMAN.csproj|e:\\\u0431\u0430\u0437\u0430 \u0437\u043D\u0430\u043D\u0438\u0439\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B\\kinoman\\kinoman\\kinoman\\form\\useroptionpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DB2E4EE2-D232-479A-A465-E8E078E94E8D}|KINOMAN\\KINOMAN.csproj|solutionrelative:kinoman\\form\\useroptionpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB2E4EE2-D232-479A-A465-E8E078E94E8D}|KINOMAN\\KINOMAN.csproj|e:\\\u0431\u0430\u0437\u0430 \u0437\u043D\u0430\u043D\u0438\u0439\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B\\kinoman\\kinoman\\kinoman\\form\\userpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB2E4EE2-D232-479A-A465-E8E078E94E8D}|KINOMAN\\KINOMAN.csproj|solutionrelative:kinoman\\form\\userpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB2E4EE2-D232-479A-A465-E8E078E94E8D}|KINOMAN\\KINOMAN.csproj|e:\\\u0431\u0430\u0437\u0430 \u0437\u043D\u0430\u043D\u0438\u0439\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B\\kinoman\\kinoman\\kinoman\\form\\userpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DB2E4EE2-D232-479A-A465-E8E078E94E8D}|KINOMAN\\KINOMAN.csproj|solutionrelative:kinoman\\form\\userpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserOptionPage.cs",
+              "DocumentMoniker": "E:\\\u0411\u0430\u0437\u0430 \u0437\u043D\u0430\u043D\u0438\u0439\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B\\KINOMAN\\KINOMAN\\KINOMAN\\form\\UserOptionPage.cs",
+              "RelativeDocumentMoniker": "KINOMAN\\form\\UserOptionPage.cs",
+              "ToolTip": "E:\\\u0411\u0430\u0437\u0430 \u0437\u043D\u0430\u043D\u0438\u0439\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B\\KINOMAN\\KINOMAN\\KINOMAN\\form\\UserOptionPage.cs",
+              "RelativeToolTip": "KINOMAN\\form\\UserOptionPage.cs",
+              "ViewState": "AQIAADEAAAAAAAAAAAAQwEYAAABFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-09T17:57:45.16Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserOptionPage.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "E:\\\u0411\u0430\u0437\u0430 \u0437\u043D\u0430\u043D\u0438\u0439\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B\\KINOMAN\\KINOMAN\\KINOMAN\\form\\UserOptionPage.cs",
+              "RelativeDocumentMoniker": "KINOMAN\\form\\UserOptionPage.cs",
+              "ToolTip": "E:\\\u0411\u0430\u0437\u0430 \u0437\u043D\u0430\u043D\u0438\u0439\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B\\KINOMAN\\KINOMAN\\KINOMAN\\form\\UserOptionPage.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "KINOMAN\\form\\UserOptionPage.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-09T17:54:35.44Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserPage.cs",
+              "DocumentMoniker": "E:\\\u0411\u0430\u0437\u0430 \u0437\u043D\u0430\u043D\u0438\u0439\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B\\KINOMAN\\KINOMAN\\KINOMAN\\form\\UserPage.cs",
+              "RelativeDocumentMoniker": "KINOMAN\\form\\UserPage.cs",
+              "ToolTip": "E:\\\u0411\u0430\u0437\u0430 \u0437\u043D\u0430\u043D\u0438\u0439\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B\\KINOMAN\\KINOMAN\\KINOMAN\\form\\UserPage.cs",
+              "RelativeToolTip": "KINOMAN\\form\\UserPage.cs",
+              "ViewState": "AQIAAIMAAAAAAAAAAAAAACcAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-09T17:50:54.095Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserPage.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "E:\\\u0411\u0430\u0437\u0430 \u0437\u043D\u0430\u043D\u0438\u0439\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B\\KINOMAN\\KINOMAN\\KINOMAN\\form\\UserPage.cs",
+              "RelativeDocumentMoniker": "KINOMAN\\form\\UserPage.cs",
+              "ToolTip": "E:\\\u0411\u0430\u0437\u0430 \u0437\u043D\u0430\u043D\u0438\u0439\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B\\KINOMAN\\KINOMAN\\KINOMAN\\form\\UserPage.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "KINOMAN\\form\\UserPage.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-09T17:50:49.518Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

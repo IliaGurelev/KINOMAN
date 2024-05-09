@@ -26,21 +26,23 @@ namespace KINOMAN
 {
     public partial class MainPage : Form
     {
-        public string[] dataTableUser = [];
-        public MainPage(string[] dataUserInput = null)
-        {
-            InitializeComponent();
-            dataTableUser = dataUserInput;
-            this.Size = new Size(1661, 973);
-        }
-
         int startPositionListFilms = 0;
         int filmCount = 0;
 
         List<FilmData.Item> filmData;
-
-        private void MainPage_Load(object sender, EventArgs e)
+        public string[] dataTableUser = [];
+        public MainPage(string[] dataUserInput = null)
         {
+            InitializeComponent();
+
+            MainPageLoadPage(dataUserInput);
+        }
+
+        private void MainPageLoadPage(string[] dataUserInput)
+        {
+            LoadUserData(dataUserInput);
+            this.Size = new Size(1661, 973);
+
             tableLayoutPanel1.BackColor = Color.FromArgb(16, 14, 25);
 
             filmData = new FilmData().GetMovie();
@@ -49,15 +51,26 @@ namespace KINOMAN
             Render_Page(filmData);
 
             //Пользователь
+            (string loginUser, string passwordUser) = CredentialStorage.LoadCredentials();
+
+            if (UserData.CheckUser(loginUser, passwordUser))
+            {
+                dataTableUser = UserData.GetUser(loginUser);
+            }
+
             if (dataTableUser != null)
             {
                 Render_User(dataTableUser);
             }
         }
 
-     
+        private void LoadUserData(string[] userData)
+        {
+            dataTableUser = userData;
+        }
 
-        private void Render_Page(List<FilmData.Item> filmData)
+
+        public void Render_Page(List<FilmData.Item> filmData)
         {
             //Фильмы
             List<FilmData.Item> films;
@@ -81,11 +94,12 @@ namespace KINOMAN
                 string nameFilm = film.Name;
                 string ImageFilm = film.ImageUrl;
                 string description = film.Description;
+                string watchUrl = film.WatchUrl;
 
                 Tuple<System.Windows.Forms.PictureBox, System.Windows.Forms.Label> filmCard =
                     new FilmCardComponent(ImageFilm, nameFilm).FilmCardCreateComponent();
 
-                string[] movieData = [film.Id.ToString(), film.Name, film.Description, film.ImageUrl];
+                string[] movieData = [film.Id.ToString(), nameFilm, description, ImageFilm, watchUrl];
 
                 filmCard.Item1.Click += (sender, e) => MovieCardClick.MovieCardHandler_Click(sender, e, movieData, dataTableUser);
                 filmCard.Item1.Cursor = Cursors.Hand;
@@ -157,13 +171,17 @@ namespace KINOMAN
 
             this.Controls.Add(iconUser);
             this.Controls.Add(loginUser);
+
+            if (UserData.CheckAdminRole(dataUserTableInput[1]))
+            {
+                AppendMovieButton.Visible = true;
+            }
         }
 
         private void UserElement_Click(object sender, EventArgs e, string[] dataUserTableInput)
         {
             UserPage userPage = new UserPage(dataUserTableInput, this);
             userPage.Show();
-
             this.Hide();
         }
 
@@ -171,7 +189,7 @@ namespace KINOMAN
         {
             if (startPositionListFilms + MainPageOption.MOVIE_SHOW_FILM <= filmCount)
             {
-                clearTable.clearTableLayout(tableLayoutPanel1);
+                clearTable.clearFlowLayoutPanel(filmContainer);
 
                 startPositionListFilms += MainPageOption.MOVIE_SHOW_FILM;
 
@@ -183,7 +201,7 @@ namespace KINOMAN
         {
             if (startPositionListFilms != 0)
             {
-                clearTable.clearTableLayout(tableLayoutPanel1);
+                clearTable.clearFlowLayoutPanel(filmContainer);
 
                 startPositionListFilms -= MainPageOption.MOVIE_SHOW_FILM;
 
@@ -207,8 +225,27 @@ namespace KINOMAN
 
         private void AppendMovieButton_Click(object sender, EventArgs e)
         {
-            AppendMoviePage appendMovieForm = new AppendMoviePage();
+            AppendMoviePage appendMovieForm = new AppendMoviePage(this);
             appendMovieForm.Show();
+        }
+
+        private void MainPage_Activated(object sender, EventArgs e)
+        {
+        }
+
+        public void RecreateForm(string[] dataUserInput = null)
+        {
+            this.Controls.Clear();  // Удалить текущие контролы
+            InitializeComponent();  // Повторно инициализировать компоненты формы
+            LoadUserData(dataUserInput);  // Метод для загрузки данных пользователя в форму, если это необходимо
+
+            MainPageLoadPage(dataUserInput);
+            this.Show();
+        }
+
+        private void MainPage_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

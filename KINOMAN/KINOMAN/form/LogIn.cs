@@ -14,11 +14,12 @@ namespace KINOMAN
 {
     public partial class LogIn : Form
     {
-        Form PrevForm;
-        public LogIn(Form PrevForm)
+        MainPage PrevMainPageForm;
+        string[] dataUserTable;
+        public LogIn(MainPage PrevMainPageForm)
         {
             InitializeComponent();
-            this.PrevForm = PrevForm;
+            this.PrevMainPageForm = PrevMainPageForm;
         }
 
         private void LogIn_Load(object sender, EventArgs e)
@@ -30,8 +31,9 @@ namespace KINOMAN
         {
             if (UserData.CheckUser(loginTextBox.Text, passwordTextBox.Text))
             {
-                MainPage mainPage = new MainPage(UserData.GetUser(loginTextBox.Text));
-                mainPage.Show();
+                CredentialStorage.SaveCredentials(loginTextBox.Text, passwordTextBox.Text);
+
+                dataUserTable = UserData.GetUser(loginTextBox.Text);
 
                 this.Close();
             }
@@ -44,7 +46,12 @@ namespace KINOMAN
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            BackToForm.BackToPrevForm(PrevForm, this);
+            this.Close();
+        }
+
+        private void LogIn_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            PrevMainPageForm.RecreateForm(dataUserTable);
         }
     }
 }

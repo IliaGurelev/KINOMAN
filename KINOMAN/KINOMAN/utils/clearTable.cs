@@ -18,5 +18,15 @@ namespace KINOMAN.utils
                 control.Dispose(); // Освобождаем ресурсы, связанные с элементом
             }
         }
+
+        static public void clearFlowLayoutPanel(FlowLayoutPanel tableLP)
+        {
+            while (tableLP.Controls.Count > 0)
+            {
+                Control control = tableLP.Controls[0];
+                tableLP.Controls.Remove(control);
+                control.Dispose(); // Освобождаем ресурсы, связанные с элементом
+            }
+        }
     }
 }

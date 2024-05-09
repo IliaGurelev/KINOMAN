@@ -14,7 +14,7 @@ namespace KINOMAN.api
 {
     internal class MovieAppendApi
     {
-        static public async void MovieAppendInDB(string nameMovie, string descriptionMovie, string imagePath)
+        static public async void MovieAppendInDB(string nameMovie, string descriptionMovie, string imagePath, string watchUrl)
         {
             string connString = ConnectStringDB.GetConnetctString();
 
@@ -26,7 +26,7 @@ namespace KINOMAN.api
                     conn.Open();
 
                     // Создание SQL-запроса INSERT
-                    string sql = "INSERT INTO movie (id, name, description, image_url) VALUES (@param1, @param2, @param3, @param4)";
+                    string sql = "INSERT INTO movie (id, name, description, image_url, watch_url) VALUES (@param1, @param2, @param3, @param4, @param5)";
 
                     //Загурзка изображения на сервер
                     string imageUrl = await ImageMovieAppend(imagePath);
@@ -42,6 +42,7 @@ namespace KINOMAN.api
                         cmd.Parameters.AddWithValue("param2", nameMovie);
                         cmd.Parameters.AddWithValue("param3", descriptionMovie);
                         cmd.Parameters.AddWithValue("param4", imageUrl);
+                        cmd.Parameters.AddWithValue("param5", watchUrl);
 
                         // Выполнение команды (вставка данных)
                         int rowsAffected = cmd.ExecuteNonQuery();

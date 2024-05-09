@@ -139,6 +139,7 @@
             this.AppendMovieButton.TabIndex = 17;
             this.AppendMovieButton.Text = "Добавить фильм";
             this.AppendMovieButton.UseVisualStyleBackColor = true;
+            this.AppendMovieButton.Visible = false;
             this.AppendMovieButton.Click += new System.EventHandler(this.AppendMovieButton_Click);
             // 
             // MainPage
@@ -161,7 +162,8 @@
             this.Name = "MainPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Главная";
-            this.Load += new System.EventHandler(this.MainPage_Load);
+            this.Activated += new System.EventHandler(this.MainPage_Activated);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainPage_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.paginationBackButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.paginationNextButton)).EndInit();

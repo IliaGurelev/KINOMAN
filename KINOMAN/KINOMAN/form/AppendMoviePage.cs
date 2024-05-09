@@ -14,12 +14,14 @@ namespace KINOMAN.form
     public partial class AppendMoviePage : Form
     {
         string ImagePath = "";
-        public AppendMoviePage()
+        MainPage mainPageForm;
+        public AppendMoviePage(MainPage mainPageForm)
         {
             InitializeComponent();
 
             FileDialogAddImageMovie.Filter = "JPEG Files (*.jpg;*.jpeg)|*.jpg;*.jpeg|PNG Files (*.png)|*.png";
             FileDialogAddImageMovie.FilterIndex = 1;
+            this.mainPageForm = mainPageForm;
         }
 
         private void AddPictureMovieBox_Click(object sender, EventArgs e)
@@ -45,10 +47,16 @@ namespace KINOMAN.form
         {
             string nameMovie = NameMovieTextBox.Text;
             string descriptionMovie = DescriptionMovieTextBox.Text;
+            string watchUrl = watchUrlTextBox.Text;
 
             if (!string.IsNullOrEmpty(nameMovie) && !string.IsNullOrEmpty(descriptionMovie) && !string.IsNullOrEmpty(ImagePath))
             {
-                MovieAppendApi.MovieAppendInDB(nameMovie, descriptionMovie, ImagePath);
+                MovieAppendApi.MovieAppendInDB(nameMovie, descriptionMovie, ImagePath, watchUrl);
+
+                NameMovieTextBox.Text = "";
+                DescriptionMovieTextBox.Text = "";
+                watchUrlTextBox.Text = "";
+                AddPictureMovieBox.Image = null;
             }
             else
             {

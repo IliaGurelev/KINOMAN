@@ -148,3 +148,12 @@ E:\База знаний\Проекты\KINOMAN\KINOMAN\KINOMAN\obj\Debug\KINOMA
 E:\База знаний\Проекты\KINOMAN\KINOMAN\KINOMAN\bin\Debug\Newtonsoft.Json.dll
 E:\База знаний\Проекты\KINOMAN\KINOMAN\KINOMAN\bin\Debug\Newtonsoft.Json.xml
 E:\База знаний\Проекты\KINOMAN\KINOMAN\KINOMAN\obj\Debug\KINOMAN.form.AppendMoviePage.resources
+E:\База знаний\Проекты\KINOMAN\KINOMAN\KINOMAN\bin\Debug\Krypton.Toolkit.dll
+E:\База знаний\Проекты\KINOMAN\KINOMAN\KINOMAN\bin\Debug\Krypton.Toolkit.xml
+E:\База знаний\Проекты\KINOMAN\KINOMAN\KINOMAN\bin\Debug\Microsoft.TeamFoundation.TestManagement.Client.dll
+E:\База знаний\Проекты\KINOMAN\KINOMAN\KINOMAN\bin\Debug\Microsoft.TeamFoundation.TestManagement.Common.dll
+E:\База знаний\Проекты\KINOMAN\KINOMAN\KINOMAN\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+E:\База знаний\Проекты\KINOMAN\KINOMAN\KINOMAN\bin\Debug\ru\Microsoft.TeamFoundation.TestManagement.Client.resources.dll
+E:\База знаний\Проекты\KINOMAN\KINOMAN\KINOMAN\bin\Debug\ru\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll
+E:\База знаний\Проекты\KINOMAN\KINOMAN\KINOMAN\obj\Debug\KINOMAN.csproj.SuggestedBindingRedirects.cache
+E:\База знаний\Проекты\KINOMAN\KINOMAN\KINOMAN\obj\Debug\KINOMAN.exe.config

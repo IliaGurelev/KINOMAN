@@ -44,7 +44,7 @@ namespace KINOMAN.api
             {
                 conn.Open();
 
-                string sql = $"SELECT movie.id, movie.name, movie.description, movie.image_url FROM favorite_movie " +
+                string sql = $"SELECT movie.id, movie.name, movie.description, movie.image_url, movie.watch_url FROM favorite_movie " +
                     "INNER JOIN movie ON movie.id = favorite_movie.id_movie " +
                     $"WHERE id_user = '{idUser}' ";
 
@@ -58,6 +58,7 @@ namespace KINOMAN.api
                             string name = reader.GetString(1);
                             string description = reader.GetString(2);
                             string imageUrl = reader.GetString(3);
+                            string watchUrl = reader.GetString(4);
 
                             // Создаем новый объект Item и добавляем его в список
                             FilmData.Item item = new FilmData.Item
@@ -65,7 +66,8 @@ namespace KINOMAN.api
                                 Id = id,
                                 Name = name,
                                 Description = description,
-                                ImageUrl = imageUrl
+                                ImageUrl = imageUrl,
+                                WatchUrl = watchUrl,
                             };
                             itemList.Add(item);
                         }
@@ -85,7 +87,7 @@ namespace KINOMAN.api
             {
                 conn.Open();
 
-                string sql = $"SELECT movie.id, movie.name, movie.description, movie.image_url FROM watched_movie " +
+                string sql = $"SELECT movie.id, movie.name, movie.description, movie.image_url, movie.watch_url FROM watched_movie " +
                     "INNER JOIN movie ON movie.id = watched_movie.id_movie " +
                     $"WHERE id_user = '{idUser}' ";
 
@@ -99,6 +101,7 @@ namespace KINOMAN.api
                             string name = reader.GetString(1);
                             string description = reader.GetString(2);
                             string imageUrl = reader.GetString(3);
+                            string watchUrl = reader.GetString(4);
 
                             // Создаем новый объект Item и добавляем его в список
                             FilmData.Item item = new FilmData.Item
@@ -106,7 +109,8 @@ namespace KINOMAN.api
                                 Id = id,
                                 Name = name,
                                 Description = description,
-                                ImageUrl = imageUrl
+                                ImageUrl = imageUrl,
+                                WatchUrl = watchUrl,
                             };
                             itemList.Add(item);
                         }

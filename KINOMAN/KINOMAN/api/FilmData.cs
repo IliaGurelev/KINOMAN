@@ -8,7 +8,7 @@ using Npgsql;
 
 namespace KINOMAN.api
 {
-    internal class FilmData
+    public class FilmData
     {
         public class Item
         {
@@ -16,6 +16,7 @@ namespace KINOMAN.api
             public string Name { get; set; }
             public string Description { get; set; }
             public string ImageUrl { get; set; }
+            public string WatchUrl {  get; set; }
         }
         public List<Item> GetMovie()
         {
@@ -26,7 +27,7 @@ namespace KINOMAN.api
             {
                 conn.Open();
 
-                string sql = "SELECT id, name, description, image_url FROM movie";
+                string sql = "SELECT id, name, description, image_url, watch_url FROM movie";
 
                 using (NpgsqlCommand cmd = new NpgsqlCommand(sql, conn))
                 {
@@ -38,6 +39,7 @@ namespace KINOMAN.api
                             string name = reader.GetString(1);
                             string description = reader.GetString(2);
                             string imageUrl = reader.GetString(3);
+                            string watchUrl = reader.GetString(4);
 
                             // Создаем новый объект Item и добавляем его в список
                             Item item = new Item
@@ -45,7 +47,8 @@ namespace KINOMAN.api
                                 Id = id,
                                 Name = name,
                                 Description = description,
-                                ImageUrl = imageUrl
+                                ImageUrl = imageUrl,
+                                WatchUrl = watchUrl,
                             };
                             itemList.Add(item);
                         }

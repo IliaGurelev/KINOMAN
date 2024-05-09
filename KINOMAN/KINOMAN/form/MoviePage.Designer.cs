@@ -35,6 +35,7 @@
             this.addFavorite = new System.Windows.Forms.Button();
             this.descriptionMovie = new System.Windows.Forms.TextBox();
             this.DeleteButton = new System.Windows.Forms.Button();
+            this.watchButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFilm)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,7 +67,7 @@
             this.addWatched.ForeColor = System.Drawing.Color.IndianRed;
             this.addWatched.Location = new System.Drawing.Point(453, 497);
             this.addWatched.Name = "addWatched";
-            this.addWatched.Size = new System.Drawing.Size(177, 37);
+            this.addWatched.Size = new System.Drawing.Size(279, 37);
             this.addWatched.TabIndex = 3;
             this.addWatched.Text = "Просмотренно";
             this.addWatched.UseVisualStyleBackColor = false;
@@ -77,9 +78,9 @@
             this.addFavorite.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addFavorite.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.addFavorite.ForeColor = System.Drawing.Color.IndianRed;
-            this.addFavorite.Location = new System.Drawing.Point(818, 497);
+            this.addFavorite.Location = new System.Drawing.Point(741, 497);
             this.addFavorite.Name = "addFavorite";
-            this.addFavorite.Size = new System.Drawing.Size(202, 37);
+            this.addFavorite.Size = new System.Drawing.Size(279, 37);
             this.addFavorite.TabIndex = 4;
             this.addFavorite.Text = "Добавить в избранное";
             this.addFavorite.UseVisualStyleBackColor = true;
@@ -100,7 +101,6 @@
             this.descriptionMovie.Size = new System.Drawing.Size(567, 350);
             this.descriptionMovie.TabIndex = 5;
             this.descriptionMovie.Text = resources.GetString("descriptionMovie.Text");
-            this.descriptionMovie.TextChanged += new System.EventHandler(this.descriptionMovie_TextChanged);
             // 
             // DeleteButton
             // 
@@ -112,12 +112,27 @@
             this.DeleteButton.UseVisualStyleBackColor = true;
             this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
             // 
+            // watchButton
+            // 
+            this.watchButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(14)))), ((int)(((byte)(25)))));
+            this.watchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.watchButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.watchButton.ForeColor = System.Drawing.Color.Brown;
+            this.watchButton.Location = new System.Drawing.Point(453, 454);
+            this.watchButton.Name = "watchButton";
+            this.watchButton.Size = new System.Drawing.Size(568, 37);
+            this.watchButton.TabIndex = 7;
+            this.watchButton.Text = "Смотреть";
+            this.watchButton.UseVisualStyleBackColor = false;
+            this.watchButton.Click += new System.EventHandler(this.watchButton_Click);
+            // 
             // MoviePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(14)))), ((int)(((byte)(25)))));
             this.ClientSize = new System.Drawing.Size(1033, 567);
+            this.Controls.Add(this.watchButton);
             this.Controls.Add(this.DeleteButton);
             this.Controls.Add(this.descriptionMovie);
             this.Controls.Add(this.addFavorite);
@@ -142,5 +157,6 @@
         private System.Windows.Forms.Button addFavorite;
         private System.Windows.Forms.TextBox descriptionMovie;
         private System.Windows.Forms.Button DeleteButton;
+        private System.Windows.Forms.Button watchButton;
     }
 }

@@ -14,12 +14,13 @@ namespace KINOMAN.form
 {
     public partial class SignUp : Form
     {
-        Form PrevForm;
-        public SignUp(Form PrevForm)
+        MainPage PrevMainPageForm;
+        string[] dataUserTable;
+        public SignUp(MainPage PrevMainPageForm)
         {
             InitializeComponent();
 
-            this.PrevForm = PrevForm;
+            this.PrevMainPageForm = PrevMainPageForm;
         }
 
         private void loginButton_Click(object sender, EventArgs e)
@@ -40,8 +41,7 @@ namespace KINOMAN.form
                     {
                         UserData.InsertUser(id, login, password);
 
-                        MainPage mainPage = new MainPage(UserData.GetUser(loginTextBox.Text));
-                        mainPage.Show();
+                        dataUserTable = UserData.GetUser(loginTextBox.Text);
 
                         this.Close();
 
@@ -61,7 +61,12 @@ namespace KINOMAN.form
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            BackToForm.BackToPrevForm(PrevForm, this);
+            this.Close();
+        }
+
+        private void SignUp_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            PrevMainPageForm.RecreateForm(dataUserTable);
         }
     }
 }
