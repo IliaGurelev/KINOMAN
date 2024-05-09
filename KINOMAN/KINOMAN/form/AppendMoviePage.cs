@@ -51,12 +51,23 @@ namespace KINOMAN.form
 
             if (!string.IsNullOrEmpty(nameMovie) && !string.IsNullOrEmpty(descriptionMovie) && !string.IsNullOrEmpty(ImagePath))
             {
+<<<<<<< HEAD
                 MovieAppendApi.MovieAppendInDB(nameMovie, descriptionMovie, ImagePath, watchUrl);
 
                 NameMovieTextBox.Text = "";
                 DescriptionMovieTextBox.Text = "";
                 watchUrlTextBox.Text = "";
                 AddPictureMovieBox.Image = null;
+=======
+                MovieAppendApi.MovieAppendInDB(nameMovie, descriptionMovie, ImagePath);
+<<<<<<< HEAD
+<<<<<<< HEAD
+                this.Close();
+=======
+>>>>>>> 1f3c3d44a6ff2e1a253510c3a33f02a3f5204fc0
+=======
+>>>>>>> 1f3c3d44a6ff2e1a253510c3a33f02a3f5204fc0
+>>>>>>> e268e2396e27078ba6dba8bdad76a3fb747774b9
             }
             else
             {

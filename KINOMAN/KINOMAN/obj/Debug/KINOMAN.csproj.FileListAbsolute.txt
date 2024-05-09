@@ -96,6 +96,28 @@ Z:\!Обмен\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопои
 Z:\!Обмен\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\bin\Debug\System.Threading.Tasks.Extensions.xml
 Z:\!Обмен\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\bin\Debug\System.ValueTuple.xml
 Z:\!Обмен\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\obj\Debug\KINOMAN.csproj.CopyComplete
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+Z:\ОБМЕН\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\obj\Debug\KINOMAN.csproj.AssemblyReference.cache
+Z:\ОБМЕН\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\obj\Debug\KINOMAN.csproj.SuggestedBindingRedirects.cache
+Z:\ОБМЕН\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\obj\Debug\KINOMAN.LogIn.resources
+Z:\ОБМЕН\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\obj\Debug\KINOMAN.MainPage.resources
+Z:\ОБМЕН\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\obj\Debug\KINOMAN.MoviePage.resources
+Z:\ОБМЕН\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\obj\Debug\KINOMAN.form.SignUp.resources
+Z:\ОБМЕН\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\obj\Debug\KINOMAN.form.UserOptionPage.resources
+Z:\ОБМЕН\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\obj\Debug\KINOMAN.form.UserPage.resources
+Z:\ОБМЕН\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\obj\Debug\KINOMAN.form.UserPageOptionPasswordAunteficator.resources
+Z:\ОБМЕН\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\obj\Debug\KINOMAN.Properties.Resources.resources
+Z:\ОБМЕН\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\obj\Debug\KINOMAN.csproj.GenerateResource.cache
+Z:\ОБМЕН\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\obj\Debug\KINOMAN.csproj.CoreCompileInputs.cache
+Z:\ОБМЕН\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\obj\Debug\KINOMAN.exe
+Z:\ОБМЕН\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\obj\Debug\KINOMAN.pdb
+=======
+=======
+>>>>>>> 1f3c3d44a6ff2e1a253510c3a33f02a3f5204fc0
+=======
+>>>>>>> 1f3c3d44a6ff2e1a253510c3a33f02a3f5204fc0
 E:\База знаний\Проекты\KINOMAN\KINOMAN\KINOMAN\bin\Debug\KINOMAN.exe.config
 E:\База знаний\Проекты\KINOMAN\KINOMAN\KINOMAN\bin\Debug\KINOMAN.exe
 E:\База знаний\Проекты\KINOMAN\KINOMAN\KINOMAN\bin\Debug\KINOMAN.pdb
@@ -148,6 +170,7 @@ E:\База знаний\Проекты\KINOMAN\KINOMAN\KINOMAN\obj\Debug\KINOMA
 E:\База знаний\Проекты\KINOMAN\KINOMAN\KINOMAN\bin\Debug\Newtonsoft.Json.dll
 E:\База знаний\Проекты\KINOMAN\KINOMAN\KINOMAN\bin\Debug\Newtonsoft.Json.xml
 E:\База знаний\Проекты\KINOMAN\KINOMAN\KINOMAN\obj\Debug\KINOMAN.form.AppendMoviePage.resources
+<<<<<<< HEAD
 E:\База знаний\Проекты\KINOMAN\KINOMAN\KINOMAN\bin\Debug\Krypton.Toolkit.dll
 E:\База знаний\Проекты\KINOMAN\KINOMAN\KINOMAN\bin\Debug\Krypton.Toolkit.xml
 E:\База знаний\Проекты\KINOMAN\KINOMAN\KINOMAN\bin\Debug\Microsoft.TeamFoundation.TestManagement.Client.dll
@@ -157,3 +180,17 @@ E:\База знаний\Проекты\KINOMAN\KINOMAN\KINOMAN\bin\Debug\ru\Mic
 E:\База знаний\Проекты\KINOMAN\KINOMAN\KINOMAN\bin\Debug\ru\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll
 E:\База знаний\Проекты\KINOMAN\KINOMAN\KINOMAN\obj\Debug\KINOMAN.csproj.SuggestedBindingRedirects.cache
 E:\База знаний\Проекты\KINOMAN\KINOMAN\KINOMAN\obj\Debug\KINOMAN.exe.config
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 1f3c3d44a6ff2e1a253510c3a33f02a3f5204fc0
+Z:\!Обмен\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\bin\Debug\Krypton.Toolkit.dll
+Z:\!Обмен\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\bin\Debug\Newtonsoft.Json.dll
+Z:\!Обмен\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\bin\Debug\Krypton.Toolkit.xml
+Z:\!Обмен\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\bin\Debug\Newtonsoft.Json.xml
+Z:\!Обмен\УП 01.01 П-31\Гурылев\!КУРСОВАЯ (Кинопоиск)\KINOMAN\KINOMAN\obj\Debug\KINOMAN.form.AppendMoviePage.resources
+=======
+>>>>>>> 1f3c3d44a6ff2e1a253510c3a33f02a3f5204fc0
+=======
+>>>>>>> 1f3c3d44a6ff2e1a253510c3a33f02a3f5204fc0
+>>>>>>> e268e2396e27078ba6dba8bdad76a3fb747774b9

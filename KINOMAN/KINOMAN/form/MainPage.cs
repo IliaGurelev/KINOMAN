@@ -30,8 +30,13 @@ namespace KINOMAN
         int filmCount = 0;
 
         List<FilmData.Item> filmData;
+<<<<<<< HEAD
         public string[] dataTableUser = [];
         public MainPage(string[] dataUserInput = null)
+=======
+
+        private void MainPage_Activated(object sender, EventArgs e)
+>>>>>>> e268e2396e27078ba6dba8bdad76a3fb747774b9
         {
             InitializeComponent();
 
@@ -47,6 +52,8 @@ namespace KINOMAN
 
             filmData = new FilmData().GetMovie();
             filmCount = filmData.Count;
+
+            clearTable.clearFlowLayoutPanel(filmContainer);
 
             Render_Page(filmData);
 
@@ -64,10 +71,13 @@ namespace KINOMAN
             }
         }
 
+<<<<<<< HEAD
         private void LoadUserData(string[] userData)
         {
             dataTableUser = userData;
         }
+=======
+>>>>>>> e268e2396e27078ba6dba8bdad76a3fb747774b9
 
 
         public void Render_Page(List<FilmData.Item> filmData)
@@ -120,6 +130,8 @@ namespace KINOMAN
                 position++;
             }
         }
+
+
 
         /*private void Render_Film(List<FilmData.Item> films, TableLayoutPanel container)
         {
@@ -228,6 +240,7 @@ namespace KINOMAN
             AppendMoviePage appendMovieForm = new AppendMoviePage(this);
             appendMovieForm.Show();
         }
+<<<<<<< HEAD
 
         private void MainPage_Activated(object sender, EventArgs e)
         {
@@ -247,5 +260,18 @@ namespace KINOMAN
         {
             Application.Exit();
         }
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+=======
+>>>>>>> 1f3c3d44a6ff2e1a253510c3a33f02a3f5204fc0
+=======
+>>>>>>> 1f3c3d44a6ff2e1a253510c3a33f02a3f5204fc0
+>>>>>>> e268e2396e27078ba6dba8bdad76a3fb747774b9
     }
 }
